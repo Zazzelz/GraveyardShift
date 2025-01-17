@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b8draj5cvt1uk"
+path="res://.godot/imported/church-18-ch_tree.obj-c03490a51e05f777bd5c84666f70a518.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-18-ch_tree.obj-c03490a51e05f777bd5c84666f70a518.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-18-ch_tree.obj"
+dest_files=["res://.godot/imported/church-18-ch_tree.obj-c03490a51e05f777bd5c84666f70a518.mesh", "res://.godot/imported/church-18-ch_tree.obj-c03490a51e05f777bd5c84666f70a518.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://nsm6rekjsyx4"
+path="res://.godot/imported/church-47-skullpileCR.obj-6e9d5d3801812b34f4ee31672f65f2be.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-47-skullpileCR.obj-6e9d5d3801812b34f4ee31672f65f2be.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-47-skullpileCR.obj"
+dest_files=["res://.godot/imported/church-47-skullpileCR.obj-6e9d5d3801812b34f4ee31672f65f2be.mesh", "res://.godot/imported/church-47-skullpileCR.obj-6e9d5d3801812b34f4ee31672f65f2be.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bt6xh3dh0m4tt"
+path="res://.godot/imported/Park_Bench_Metal_02.obj-19d21f60d6ac57a31c3c657beb15fe00.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Park_Bench_Metal_02.obj-19d21f60d6ac57a31c3c657beb15fe00.mesh"]
+
+source_file="res://01_Assets/Park_Furnishing/Park_Bench_Metal_02.obj"
+dest_files=["res://.godot/imported/Park_Bench_Metal_02.obj-19d21f60d6ac57a31c3c657beb15fe00.mesh", "res://.godot/imported/Park_Bench_Metal_02.obj-19d21f60d6ac57a31c3c657beb15fe00.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

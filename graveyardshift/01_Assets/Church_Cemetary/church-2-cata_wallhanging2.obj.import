@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c5s4cn8hhrtn7"
+path="res://.godot/imported/church-2-cata_wallhanging2.obj-7397921cf724be21e4dfd640169d2d97.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-2-cata_wallhanging2.obj-7397921cf724be21e4dfd640169d2d97.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-2-cata_wallhanging2.obj"
+dest_files=["res://.godot/imported/church-2-cata_wallhanging2.obj-7397921cf724be21e4dfd640169d2d97.mesh", "res://.godot/imported/church-2-cata_wallhanging2.obj-7397921cf724be21e4dfd640169d2d97.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cqeolsgln7n2d"
+path="res://.godot/imported/church-63-ch_trapdoor.obj-0df602942c38e27ede00d7af00112f6f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-63-ch_trapdoor.obj-0df602942c38e27ede00d7af00112f6f.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-63-ch_trapdoor.obj"
+dest_files=["res://.godot/imported/church-63-ch_trapdoor.obj-0df602942c38e27ede00d7af00112f6f.mesh", "res://.godot/imported/church-63-ch_trapdoor.obj-0df602942c38e27ede00d7af00112f6f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

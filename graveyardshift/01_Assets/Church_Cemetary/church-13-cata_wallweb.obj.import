@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cwomeso681wfy"
+path="res://.godot/imported/church-13-cata_wallweb.obj-377f6f11f510d78f329c4625b5e9c65f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-13-cata_wallweb.obj-377f6f11f510d78f329c4625b5e9c65f.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-13-cata_wallweb.obj"
+dest_files=["res://.godot/imported/church-13-cata_wallweb.obj-377f6f11f510d78f329c4625b5e9c65f.mesh", "res://.godot/imported/church-13-cata_wallweb.obj-377f6f11f510d78f329c4625b5e9c65f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

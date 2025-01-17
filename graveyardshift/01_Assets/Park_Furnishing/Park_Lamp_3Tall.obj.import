@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://pjantrxfkoyg"
+path="res://.godot/imported/Park_Lamp_3Tall.obj-efd38224ede488381152917a5bd0e52d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Park_Lamp_3Tall.obj-efd38224ede488381152917a5bd0e52d.mesh"]
+
+source_file="res://01_Assets/Park_Furnishing/Park_Lamp_3Tall.obj"
+dest_files=["res://.godot/imported/Park_Lamp_3Tall.obj-efd38224ede488381152917a5bd0e52d.mesh", "res://.godot/imported/Park_Lamp_3Tall.obj-efd38224ede488381152917a5bd0e52d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

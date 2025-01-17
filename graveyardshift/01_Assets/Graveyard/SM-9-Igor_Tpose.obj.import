@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bwpfdc868mfql"
+path="res://.godot/imported/SM-9-Igor_Tpose.obj-be72102d22ede66a9c9eca60044d5c7d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM-9-Igor_Tpose.obj-be72102d22ede66a9c9eca60044d5c7d.mesh"]
+
+source_file="res://01_Assets/Graveyard/SM-9-Igor_Tpose.obj"
+dest_files=["res://.godot/imported/SM-9-Igor_Tpose.obj-be72102d22ede66a9c9eca60044d5c7d.mesh", "res://.godot/imported/SM-9-Igor_Tpose.obj-be72102d22ede66a9c9eca60044d5c7d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

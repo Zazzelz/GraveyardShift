@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cmkemiaqw8yc6"
+path="res://.godot/imported/church-25-ch_benchbroken2.obj-d8d89432f31db3cdb6c445afebe0dd34.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-25-ch_benchbroken2.obj-d8d89432f31db3cdb6c445afebe0dd34.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-25-ch_benchbroken2.obj"
+dest_files=["res://.godot/imported/church-25-ch_benchbroken2.obj-d8d89432f31db3cdb6c445afebe0dd34.mesh", "res://.godot/imported/church-25-ch_benchbroken2.obj-d8d89432f31db3cdb6c445afebe0dd34.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

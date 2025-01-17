@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dd2keokydwner"
+path="res://.godot/imported/church-82-ch_baseupper.obj-8313fee8bf72e702fbb1f80e8180590c.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-82-ch_baseupper.obj-8313fee8bf72e702fbb1f80e8180590c.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-82-ch_baseupper.obj"
+dest_files=["res://.godot/imported/church-82-ch_baseupper.obj-8313fee8bf72e702fbb1f80e8180590c.mesh", "res://.godot/imported/church-82-ch_baseupper.obj-8313fee8bf72e702fbb1f80e8180590c.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

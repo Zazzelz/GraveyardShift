@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dwrq3qtbaora6"
+path="res://.godot/imported/coin_round_gold.obj-76b03b0bc1d3ddfc034cb1a8409d594d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/coin_round_gold.obj-76b03b0bc1d3ddfc034cb1a8409d594d.mesh"]
+
+source_file="res://01_Assets/Coins/Round/coin_round_gold.obj"
+dest_files=["res://.godot/imported/coin_round_gold.obj-76b03b0bc1d3ddfc034cb1a8409d594d.mesh", "res://.godot/imported/coin_round_gold.obj-76b03b0bc1d3ddfc034cb1a8409d594d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

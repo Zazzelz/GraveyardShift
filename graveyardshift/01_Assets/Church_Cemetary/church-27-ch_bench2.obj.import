@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://s04bv6junrvo"
+path="res://.godot/imported/church-27-ch_bench2.obj-b78adf0986dcfc3a2cc51c2228bc0a7a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-27-ch_bench2.obj-b78adf0986dcfc3a2cc51c2228bc0a7a.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-27-ch_bench2.obj"
+dest_files=["res://.godot/imported/church-27-ch_bench2.obj-b78adf0986dcfc3a2cc51c2228bc0a7a.mesh", "res://.godot/imported/church-27-ch_bench2.obj-b78adf0986dcfc3a2cc51c2228bc0a7a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

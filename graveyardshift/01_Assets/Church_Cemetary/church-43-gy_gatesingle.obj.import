@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://qmydkkdo47rb"
+path="res://.godot/imported/church-43-gy_gatesingle.obj-b778d633531f2e1b6a507f6e1fd9a98e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-43-gy_gatesingle.obj-b778d633531f2e1b6a507f6e1fd9a98e.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-43-gy_gatesingle.obj"
+dest_files=["res://.godot/imported/church-43-gy_gatesingle.obj-b778d633531f2e1b6a507f6e1fd9a98e.mesh", "res://.godot/imported/church-43-gy_gatesingle.obj-b778d633531f2e1b6a507f6e1fd9a98e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

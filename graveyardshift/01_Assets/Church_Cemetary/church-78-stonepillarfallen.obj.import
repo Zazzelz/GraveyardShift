@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://coki30msq3r86"
+path="res://.godot/imported/church-78-stonepillarfallen.obj-cbfadc033e14b705d2fe59c23d860f4a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-78-stonepillarfallen.obj-cbfadc033e14b705d2fe59c23d860f4a.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-78-stonepillarfallen.obj"
+dest_files=["res://.godot/imported/church-78-stonepillarfallen.obj-cbfadc033e14b705d2fe59c23d860f4a.mesh", "res://.godot/imported/church-78-stonepillarfallen.obj-cbfadc033e14b705d2fe59c23d860f4a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

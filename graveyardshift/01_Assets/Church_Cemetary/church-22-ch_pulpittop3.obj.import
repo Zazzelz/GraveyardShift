@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dyb0rcbjs4nlb"
+path="res://.godot/imported/church-22-ch_pulpittop3.obj-d2f1e60de17782b093ba3da8620b98e0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-22-ch_pulpittop3.obj-d2f1e60de17782b093ba3da8620b98e0.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-22-ch_pulpittop3.obj"
+dest_files=["res://.godot/imported/church-22-ch_pulpittop3.obj-d2f1e60de17782b093ba3da8620b98e0.mesh", "res://.godot/imported/church-22-ch_pulpittop3.obj-d2f1e60de17782b093ba3da8620b98e0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://rlguuukb3ewx"
+path="res://.godot/imported/church-39-candlewhite.obj-d0f5a3f832463d0e92984fb6fd88c1e0.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-39-candlewhite.obj-d0f5a3f832463d0e92984fb6fd88c1e0.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-39-candlewhite.obj"
+dest_files=["res://.godot/imported/church-39-candlewhite.obj-d0f5a3f832463d0e92984fb6fd88c1e0.mesh", "res://.godot/imported/church-39-candlewhite.obj-d0f5a3f832463d0e92984fb6fd88c1e0.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

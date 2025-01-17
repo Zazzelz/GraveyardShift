@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://btk6albco5ekq"
+path="res://.godot/imported/Park_Fence_Edge.obj-a7f81781b0c31e2fa6d179135bd25a3d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Park_Fence_Edge.obj-a7f81781b0c31e2fa6d179135bd25a3d.mesh"]
+
+source_file="res://01_Assets/Park_Furnishing/Park_Fence_Edge.obj"
+dest_files=["res://.godot/imported/Park_Fence_Edge.obj-a7f81781b0c31e2fa6d179135bd25a3d.mesh", "res://.godot/imported/Park_Fence_Edge.obj-a7f81781b0c31e2fa6d179135bd25a3d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

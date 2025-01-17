@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dsjmjv2owrdvv"
+path="res://.godot/imported/church-69-gy_wallpost.obj-15b709f35b6a4b4604d6424730ad0ddc.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-69-gy_wallpost.obj-15b709f35b6a4b4604d6424730ad0ddc.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-69-gy_wallpost.obj"
+dest_files=["res://.godot/imported/church-69-gy_wallpost.obj-15b709f35b6a4b4604d6424730ad0ddc.mesh", "res://.godot/imported/church-69-gy_wallpost.obj-15b709f35b6a4b4604d6424730ad0ddc.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b4vyt1t8axt7o"
+path="res://.godot/imported/SM-0-Ground.obj-003347a7ceef9d84ce869edaa8044a9d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM-0-Ground.obj-003347a7ceef9d84ce869edaa8044a9d.mesh"]
+
+source_file="res://01_Assets/Graveyard/SM-0-Ground.obj"
+dest_files=["res://.godot/imported/SM-0-Ground.obj-003347a7ceef9d84ce869edaa8044a9d.mesh", "res://.godot/imported/SM-0-Ground.obj-003347a7ceef9d84ce869edaa8044a9d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://rhygmp3bcbvr"
+path="res://.godot/imported/church-74-gy_dirtgrave.obj-3464fa104e0f9d34ce426a0b6d749db3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-74-gy_dirtgrave.obj-3464fa104e0f9d34ce426a0b6d749db3.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-74-gy_dirtgrave.obj"
+dest_files=["res://.godot/imported/church-74-gy_dirtgrave.obj-3464fa104e0f9d34ce426a0b6d749db3.mesh", "res://.godot/imported/church-74-gy_dirtgrave.obj-3464fa104e0f9d34ce426a0b6d749db3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

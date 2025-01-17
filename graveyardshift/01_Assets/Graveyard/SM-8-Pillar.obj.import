@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b1rkhqxbtutm6"
+path="res://.godot/imported/SM-8-Pillar.obj-bcf8f65ed60e9f9c3c2e4f2cf063a393.mesh"
+
+[deps]
+
+files=["res://.godot/imported/SM-8-Pillar.obj-bcf8f65ed60e9f9c3c2e4f2cf063a393.mesh"]
+
+source_file="res://01_Assets/Graveyard/SM-8-Pillar.obj"
+dest_files=["res://.godot/imported/SM-8-Pillar.obj-bcf8f65ed60e9f9c3c2e4f2cf063a393.mesh", "res://.godot/imported/SM-8-Pillar.obj-bcf8f65ed60e9f9c3c2e4f2cf063a393.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

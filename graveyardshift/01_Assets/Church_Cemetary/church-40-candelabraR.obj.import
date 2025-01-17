@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://0srhsya5gf62"
+path="res://.godot/imported/church-40-candelabraR.obj-66714b1dd21eca17e0e69fe95b040276.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-40-candelabraR.obj-66714b1dd21eca17e0e69fe95b040276.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-40-candelabraR.obj"
+dest_files=["res://.godot/imported/church-40-candelabraR.obj-66714b1dd21eca17e0e69fe95b040276.mesh", "res://.godot/imported/church-40-candelabraR.obj-66714b1dd21eca17e0e69fe95b040276.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c648dl8q07j61"
+path="res://.godot/imported/church-30-gy_fencemetal2.obj-833d545ff9e1816efc6552d9b7e9257e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/church-30-gy_fencemetal2.obj-833d545ff9e1816efc6552d9b7e9257e.mesh"]
+
+source_file="res://01_Assets/Church_Cemetary/church-30-gy_fencemetal2.obj"
+dest_files=["res://.godot/imported/church-30-gy_fencemetal2.obj-833d545ff9e1816efc6552d9b7e9257e.mesh", "res://.godot/imported/church-30-gy_fencemetal2.obj-833d545ff9e1816efc6552d9b7e9257e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
