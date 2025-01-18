@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxd36fthvajcg"]
+
+[ext_resource type="Script" path="res://02_Environment/firelight.gd" id="1_h7ptj"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_sgeqs"]
+noise_type = 3
+seed = 3
+frequency = 0.0553
+fractal_type = 3
+
+[sub_resource type="NoiseTexture3D" id="NoiseTexture3D_ch86s"]
+noise = SubResource("FastNoiseLite_sgeqs")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1.97346, 0, 0, 0, 1, 0, 0, 0)
+light_color = Color(0.48398, 0.870766, 0.847029, 1)
+omni_range = 1.199
+omni_attenuation = -5.869
+script = ExtResource("1_h7ptj")
+noise = SubResource("NoiseTexture3D_ch86s")

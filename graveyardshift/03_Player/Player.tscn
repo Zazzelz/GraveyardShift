@@ -1,55 +1,97 @@
-[gd_scene load_steps=7 format=3 uid="uid://8qejuy0wgs0h"]
+[gd_scene load_steps=17 format=3 uid="uid://8qejuy0wgs0h"]
 
+[ext_resource type="Script" path="res://03_Player/player.gd" id="1_7pq7n"]
 [ext_resource type="PackedScene" uid="uid://b1eu8rjjx3ky6" path="res://03_Player/PlayerAnimations/BasePose.fbx" id="1_ljo1p"]
 [ext_resource type="AnimationLibrary" uid="uid://cm18lrfo53fce" path="res://03_Player/PlayerAnimations.res" id="2_8pk8b"]
 [ext_resource type="Texture2D" uid="uid://dkefpsa0y5ybd" path="res://01_Assets/Graveyard/SM-9-Igor_Tpose.png" id="2_ifqqf"]
+[ext_resource type="Script" path="res://03_Player/GroundsKeeper_Skin.gd" id="3_wxa4m"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_thpo4"]
 albedo_texture = ExtResource("2_ifqqf")
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6uj8p"]
 
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_47cti"]
+animation = &"PlayerAnimations/Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_de6ua"]
+animation = &"PlayerAnimations/Walk"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_jajwc"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cy365"]
+xfade_time = 0.1
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_ksgtj"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_guhxp"]
+states/End/position = Vector2(1161, 103)
+states/PlayerAnimations_Idle/node = SubResource("AnimationNodeAnimation_47cti")
+states/PlayerAnimations_Idle/position = Vector2(625, 152)
+states/PlayerAnimations_Walk/node = SubResource("AnimationNodeAnimation_de6ua")
+states/PlayerAnimations_Walk/position = Vector2(945, 152)
+states/Start/position = Vector2(625, 61)
+transitions = ["Start", "PlayerAnimations_Idle", SubResource("AnimationNodeStateMachineTransition_jajwc"), "PlayerAnimations_Idle", "PlayerAnimations_Walk", SubResource("AnimationNodeStateMachineTransition_cy365"), "PlayerAnimations_Walk", "PlayerAnimations_Idle", SubResource("AnimationNodeStateMachineTransition_ksgtj")]
+graph_offset = Vector2(127, 25)
+
+[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_r1c63"]
+graph_offset = Vector2(-435.005, 256.636)
+nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_guhxp")
+nodes/StateMachine/position = Vector2(40, 200)
+nodes/output/position = Vector2(280, 200)
+node_connections = [&"output", 0, &"StateMachine"]
+
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_7i1c3"]
 radius = 0.595071
 height = 2.08675
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_5rcmp"]
+
 [node name="Player" type="CharacterBody3D"]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 0, 0)
+script = ExtResource("1_7pq7n")
 
 [node name="GroundsKeeper" parent="." instance=ExtResource("1_ljo1p")]
-transform = Transform3D(85.4765, 0, 0, 0, 101.835, 0, 0, 0, 105.809, -0.103902, -0.397023, -0.0557814)
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.103902, -0.397023, -0.0557814)
+script = ExtResource("3_wxa4m")
 
 [node name="Skeleton3D" parent="GroundsKeeper" index="0"]
-bones/0/position = Vector3(0.00158778, 0.0139889, 0.000283728)
-bones/0/rotation = Quaternion(0.0548237, -0.0110572, -0.0233945, 0.998161)
-bones/1/rotation = Quaternion(0.110214, 0.00018257, 0.00497075, 0.993896)
-bones/2/rotation = Quaternion(0.0470735, 0.00249415, -0.000461284, 0.998888)
-bones/3/rotation = Quaternion(-0.0396523, 0.00216763, -0.000709062, 0.999211)
-bones/4/rotation = Quaternion(-0.0543381, -0.0255498, 0.0444622, 0.997205)
-bones/5/rotation = Quaternion(-0.0373436, -0.000939631, -0.0418389, 0.998426)
-bones/7/rotation = Quaternion(0.697077, 0.296207, -0.498599, 0.421596)
-bones/8/rotation = Quaternion(0.122936, -0.0700256, 0.0943931, 0.98543)
-bones/9/rotation = Quaternion(-0.0607758, 0.192073, 0.347305, 0.915857)
-bones/10/rotation = Quaternion(0.0733143, -0.271881, -0.214847, 0.935172)
-bones/11/rotation = Quaternion(0.0733122, -0.0858645, -0.0594765, 0.991824)
-bones/12/rotation = Quaternion(-0.401313, 0.0404997, 0.0542067, 0.913438)
-bones/13/rotation = Quaternion(0.0878208, 0.218316, -0.0388254, 0.971143)
-bones/15/rotation = Quaternion(0.65194, -0.340512, 0.631104, 0.246441)
-bones/16/rotation = Quaternion(0.0744413, -0.150783, -0.145822, 0.974915)
-bones/17/rotation = Quaternion(-0.000719134, 0.0519596, -0.194925, 0.979441)
-bones/18/rotation = Quaternion(-0.124489, 0.250313, -0.0435201, 0.959141)
-bones/19/rotation = Quaternion(0.191687, 0.0239125, 0.0204262, 0.980952)
-bones/20/rotation = Quaternion(-0.253916, -0.0457866, -0.0917023, 0.96178)
-bones/21/rotation = Quaternion(0.398475, -0.0334158, -0.0765813, 0.913365)
-bones/23/rotation = Quaternion(0.0483015, 0.18132, 0.98084, -0.0523641)
-bones/24/rotation = Quaternion(-0.311735, 0.000148911, -0.0274412, 0.949773)
-bones/25/rotation = Quaternion(0.678638, -0.281017, 0.096072, 0.671752)
-bones/26/rotation = Quaternion(0.142497, 0.113685, -0.0412302, 0.98238)
-bones/28/rotation = Quaternion(-0.0927563, 0.283558, 0.953104, 0.0508406)
-bones/29/rotation = Quaternion(-0.594464, -0.0554353, 0.0977149, 0.796236)
-bones/30/rotation = Quaternion(0.635653, 0.314519, -0.108721, 0.696565)
-bones/31/rotation = Quaternion(0.183043, -0.0462929, -0.0632671, 0.979974)
+transform = Transform3D(70, 0, 0, 0, 70, 0, 0, 0, 70, 0, 0, 0)
+bones/0/position = Vector3(0.000202125, 0.0136473, -0.000826542)
+bones/0/rotation = Quaternion(0.144057, 0.0475455, -0.0524324, 0.987035)
+bones/1/rotation = Quaternion(0.105484, 0.0157919, -0.0266637, 0.993938)
+bones/2/rotation = Quaternion(0.0683014, 0.0123747, -0.0204704, 0.997378)
+bones/3/rotation = Quaternion(0.0683305, 0.0117567, -0.0207345, 0.997378)
+bones/4/rotation = Quaternion(-0.122535, -0.00330009, 0.00944024, 0.992414)
+bones/5/rotation = Quaternion(-0.328376, -0.0110543, -0.0006868, 0.944482)
+bones/7/rotation = Quaternion(0.622751, 0.380539, -0.563499, 0.387092)
+bones/8/rotation = Quaternion(0.0997316, -0.00239433, 0.356949, 0.928782)
+bones/9/rotation = Quaternion(-0.0122113, -0.166853, 0.496314, 0.851871)
+bones/10/rotation = Quaternion(-0.0268884, 0.141598, -0.19051, 0.971047)
+bones/11/rotation = Quaternion(0.124668, -0.0100438, -0.014904, 0.992036)
+bones/12/rotation = Quaternion(-0.455951, 0.0069288, -0.0135971, 0.889874)
+bones/13/rotation = Quaternion(0.0653353, 0.217473, -0.0885893, 0.96984)
+bones/15/rotation = Quaternion(0.546995, -0.42053, 0.612019, 0.386503)
+bones/16/rotation = Quaternion(0.148464, -0.15124, -0.394688, 0.894039)
+bones/17/rotation = Quaternion(-0.00782226, 0.127367, -0.385947, 0.913653)
+bones/18/rotation = Quaternion(-0.0532696, 0.148414, 0.0874952, 0.983606)
+bones/19/rotation = Quaternion(0.131202, 0.000110394, 0.0120168, 0.991283)
+bones/20/rotation = Quaternion(-0.396487, -0.015164, 0.0278848, 0.917491)
+bones/21/rotation = Quaternion(0.271299, -0.0482733, 0.00696296, 0.961259)
+bones/23/rotation = Quaternion(0.140264, 0.340914, 0.928781, -0.0383296)
+bones/24/rotation = Quaternion(-0.320472, -0.0282582, 0.0705383, 0.944205)
+bones/25/rotation = Quaternion(0.596058, -0.284509, 0.080694, 0.746497)
+bones/26/rotation = Quaternion(0.225133, 0.0544428, -0.0129409, 0.97272)
+bones/28/rotation = Quaternion(-0.24333, 0.202439, 0.948565, -0.00570732)
+bones/29/rotation = Quaternion(-0.132872, 0.0746615, -0.0406003, 0.987483)
+bones/30/rotation = Quaternion(0.489841, 0.367354, -0.0885083, 0.785667)
+bones/31/rotation = Quaternion(0.229319, -0.0863496, 0.0204161, 0.969299)
 
 [node name="Igor_Tpose" parent="GroundsKeeper/Skeleton3D" index="0"]
+process_priority = 1
+process_physics_priority = 1
 surface_material_override/0 = SubResource("StandardMaterial3D_thpo4")
 
 [node name="AnimationPlayer" parent="GroundsKeeper" index="1"]
@@ -57,10 +99,29 @@ libraries = {
 "": SubResource("AnimationLibrary_6uj8p"),
 "PlayerAnimations": ExtResource("2_8pk8b")
 }
-autoplay = "PlayerAnimations/Idle"
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+unique_name_in_owner = true
+root_node = NodePath("%GroundsKeeper")
+tree_root = SubResource("AnimationNodeBlendTree_r1c63")
+anim_player = NodePath("../GroundsKeeper/AnimationPlayer")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1.4, 0, 0, 0, 1, -0.0552803, 1.08954, -0.203583)
+transform = Transform3D(0.8, 0, 0, 0, 0.8, 0, 0, 0, 0.8, -0.102562, 0.560679, 0)
 shape = SubResource("CapsuleShape3D_7i1c3")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 0, 0, 0.957461, -0.288564, 0, 0.288564, 0.957461, 0.0227617, 1.16335, -0.224199)
+
+[node name="SpringArm3D" type="SpringArm3D" parent="CameraPivot"]
+transform = Transform3D(-1, -3.43078e-15, -1.50996e-07, -7.9308e-15, 1, 2.98023e-08, 1.50996e-07, 2.98023e-08, -1, 0, 0.000529815, -0.0221526)
+shape = SubResource("SphereShape3D_5rcmp")
+spring_length = 5.0
+margin = 0.095
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot/SpringArm3D"]
+unique_name_in_owner = true
+transform = Transform3D(1, 0, 4.90728e-15, 0, 1, 0, -4.90728e-15, 0, 1, -1.10595e-09, -0.00394596, 0.0120493)
 
 [editable path="GroundsKeeper"]
