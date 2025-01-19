@@ -11,6 +11,6 @@ func idle():
 func walk():
 	state_machine.travel("PlayerAnimations_Walk")
 	
-#func jump():
-	#state_machine.travel("PlayerAnimations_Jump")
+func jump():
+	state_machine.travel("PlayerAnimations_Jump")
 	
