@@ -4,22 +4,22 @@
 [ext_resource type="PackedScene" uid="uid://dxd36fthvajcg" path="res://02_Environment/firelight.tscn" id="1_3juaq"]
 [ext_resource type="PackedScene" uid="uid://8qejuy0wgs0h" path="res://03_Player/Player.tscn" id="3_ros2t"]
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_nlb4x"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_m827r"]
 noise_type = 2
 seed = 2
 frequency = 0.0668
 fractal_type = 3
 
 [sub_resource type="NoiseTexture3D" id="NoiseTexture3D_l60oe"]
-noise = SubResource("FastNoiseLite_nlb4x")
+noise = SubResource("FastNoiseLite_m827r")
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_g5ct7"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_8mjg3"]
 noise_type = 4
 seed = 1
 frequency = 0.3052
 
 [sub_resource type="NoiseTexture3D" id="NoiseTexture3D_1pxxq"]
-noise = SubResource("FastNoiseLite_g5ct7")
+noise = SubResource("FastNoiseLite_8mjg3")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_jw6wp"]
 sky_top_color = Color(0.0497727, 0.258326, 0.306184, 1)
@@ -28,12 +28,12 @@ sky_curve = 0.0315336
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Sky" id="Sky_66dx6"]
+[sub_resource type="Sky" id="Sky_ya7bx"]
 sky_material = SubResource("ProceduralSkyMaterial_jw6wp")
 
 [sub_resource type="Environment" id="Environment_muan6"]
 background_mode = 2
-sky = SubResource("Sky_66dx6")
+sky = SubResource("Sky_ya7bx")
 
 [node name="Main" type="Node3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.40114, -9.83706)
