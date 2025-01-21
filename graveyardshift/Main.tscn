@@ -89,52 +89,13 @@ noise = SubResource("NoiseTexture3D_1pxxq")
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_muan6")
 
-[node name="Player" parent="." instance=ExtResource("3_ros2t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0)
-
-[node name="Skeleton3D" parent="Player/GroundsKeeper" index="0"]
-bones/0/position = Vector3(-2.66247e-18, 0.000416734, -0.00182481)
-bones/0/rotation = Quaternion(0, 0, 0, 1)
-bones/1/rotation = Quaternion(0.0138263, 3.58282e-18, 2.59105e-16, 0.999904)
-bones/2/rotation = Quaternion(7.40532e-08, -7.30876e-30, -9.86965e-23, 1)
-bones/3/rotation = Quaternion(3.46945e-18, -4.95338e-34, 2.46656e-32, 1)
-bones/4/rotation = Quaternion(-0.0138264, -3.58284e-18, -2.59105e-16, 0.999904)
-bones/5/rotation = Quaternion(0, 0, 0, 1)
-bones/7/rotation = Quaternion(0.596031, 0.384494, -0.586662, 0.390819)
-bones/8/rotation = Quaternion(-0.0336907, 0.000803723, -0.0238356, 0.999148)
-bones/9/rotation = Quaternion(-0.139556, -0.0130283, 0.0920336, 0.985842)
-bones/10/rotation = Quaternion(-0.164873, -7.00005e-05, 0.000418762, 0.986315)
-bones/11/rotation = Quaternion(0.0625056, -0.00997795, -0.157321, 0.985517)
-bones/12/rotation = Quaternion(1.00614e-16, 6.93889e-18, 6.93889e-18, 1)
-bones/13/rotation = Quaternion(-4.60569e-16, -7.28584e-17, 3.46945e-17, 1)
-bones/15/rotation = Quaternion(0.5937, -0.386008, 0.589107, 0.389192)
-bones/16/rotation = Quaternion(-0.0346092, 0.000161123, -0.00465267, 0.99939)
-bones/17/rotation = Quaternion(-0.138863, 0.00691781, -0.0492726, 0.989061)
-bones/18/rotation = Quaternion(-0.134028, -0.00829612, 0.0612205, 0.98905)
-bones/19/rotation = Quaternion(0.0244882, 0.000111382, 0.00454696, 0.99969)
-bones/20/rotation = Quaternion(1.11049e-16, -2.03288e-20, 1.73472e-18, 1)
-bones/21/rotation = Quaternion(1.38776e-17, -1.49078e-19, 1.73472e-18, 1)
-bones/23/rotation = Quaternion(0.000421028, 0.0276923, 0.999501, -0.0151962)
-bones/24/rotation = Quaternion(-0.018507, 0.000204363, -0.0110399, 0.999768)
-bones/25/rotation = Quaternion(0.4987, -0.244903, 0.149318, 0.81794)
-bones/26/rotation = Quaternion(0.223279, 0.0556081, -0.0127596, 0.973083)
-bones/28/rotation = Quaternion(-0.000258138, 0.0169623, 0.99974, 0.0152144)
-bones/29/rotation = Quaternion(0.011558, 0.000127888, 0.0110634, 0.999872)
-bones/30/rotation = Quaternion(0.478711, 0.261045, -0.151574, 0.824449)
-bones/31/rotation = Quaternion(0.22919, -0.0863631, 0.0204198, 0.969328)
-
-[node name="BoneAttachment3D" parent="Player/GroundsKeeper/Skeleton3D" index="1"]
-transform = Transform3D(-0.0131616, -0.97891, -0.203866, 0.00180036, 0.20386, -0.978998, 0.999912, -0.0132521, -0.000920765, -0.0148387, 0.00645112, -0.000953857)
-
-[node name="CameraPivot" parent="Player" index="3"]
-transform = Transform3D(1, -1.64904e-09, -5.47153e-09, 0, 0.95746, -0.288565, 5.71463e-09, 0.288565, 0.95746, -0.0581179, 2.05889, -0.182565)
-
 [node name="Environment" parent="." instance=ExtResource("1_2t57h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.30079, 0, 0.103554)
+
+[node name="Player" parent="." instance=ExtResource("3_ros2t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -5)
 
 [editable path="Lighting/TreeLight"]
 [editable path="Lighting/Node3D"]
 [editable path="Lighting/Node3D2"]
-[editable path="Player"]
-[editable path="Player/GroundsKeeper"]
 [editable path="Environment"]
