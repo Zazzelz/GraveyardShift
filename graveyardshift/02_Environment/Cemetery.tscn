@@ -1,4 +1,4 @@
-[gd_scene load_steps=101 format=3 uid="uid://cobvkbplflytl"]
+[gd_scene load_steps=107 format=3 uid="uid://cobvkbplflytl"]
 
 [ext_resource type="ArrayMesh" uid="uid://b4vyt1t8axt7o" path="res://01_Assets/Graveyard/SM-0-Ground.obj" id="1_gjd0i"]
 [ext_resource type="ArrayMesh" uid="uid://d3s2n8drgvlt8" path="res://01_Assets/Graveyard/SM-3-Tomb1.obj" id="3_nu0ke"]
@@ -10,6 +10,12 @@
 [ext_resource type="ArrayMesh" uid="uid://fcgmtfc10g3a" path="res://01_Assets/Graveyard/SM-7-Fence.obj" id="9_s275o"]
 [ext_resource type="ArrayMesh" uid="uid://bfjlcisls32h8" path="res://01_Assets/Park_Furnishing/Park_Bin_03.obj" id="10_363kc"]
 [ext_resource type="ArrayMesh" uid="uid://bc3r7b52auih5" path="res://01_Assets/Church_Cemetary/church-44-gy_gatedbl.obj" id="11_vvpd3"]
+[ext_resource type="ArrayMesh" uid="uid://s04bv6junrvo" path="res://01_Assets/Church_Cemetary/church-27-ch_bench2.obj" id="12_kxg68"]
+[ext_resource type="ArrayMesh" uid="uid://bb7jxegavdflw" path="res://01_Assets/Church_Cemetary/church-37-candleholderbig.obj" id="13_6smqk"]
+[ext_resource type="ArrayMesh" uid="uid://bmo1ikwucxwn5" path="res://01_Assets/Church_Cemetary/church-38-candelabrawhite.obj" id="14_1sk14"]
+[ext_resource type="ArrayMesh" uid="uid://cl4anxl4cxfyb" path="res://01_Assets/Church_Cemetary/church-31-wagon2.obj" id="15_3i8ff"]
+[ext_resource type="ArrayMesh" uid="uid://bitr0vhi4obci" path="res://01_Assets/Church_Cemetary/church-73-flowerred.obj" id="16_7qsnb"]
+[ext_resource type="ArrayMesh" uid="uid://rhygmp3bcbvr" path="res://01_Assets/Church_Cemetary/church-74-gy_dirtgrave.obj" id="17_afta4"]
 [ext_resource type="ArrayMesh" uid="uid://m63yfikx2qap" path="res://01_Assets/Church_Cemetary/church-16-ch_iso.obj" id="19_3h2om"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kk0p1"]
@@ -467,7 +473,7 @@ mesh = ExtResource("1_gjd0i")
 skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBpdu3D25"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.00485, -0.41478, -10.6575)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.00485, -0.520169, -10.6575)
 shape = SubResource("ConvexPolygonShape3D_8svvp")
 
 [node name="StaticBpdu3D26" type="StaticBody3D" parent="Ground"]
@@ -522,7 +528,7 @@ mesh = ExtResource("1_gjd0i")
 skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBpdu3D30"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5007, -0.828087, -22.8787)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5007, 0.0209488, -22.8787)
 shape = SubResource("ConvexPolygonShape3D_ykwci")
 
 [node name="StaticBpdu3D31" type="StaticBody3D" parent="Ground"]
@@ -533,7 +539,7 @@ mesh = ExtResource("1_gjd0i")
 skeleton = NodePath("../../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBpdu3D31"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.74965, -0.463285, -15.7883)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.74965, -0.605435, -15.7883)
 shape = SubResource("ConvexPolygonShape3D_lihay")
 
 [node name="StaticBpdu3D32" type="StaticBody3D" parent="Ground"]
@@ -849,6 +855,7 @@ transform = Transform3D(0.024851, 0, 0.999691, 0, 1, 0, -0.999691, 0, 0.024851, 
 shape = SubResource("ConvexPolygonShape3D_jq18w")
 
 [node name="StaticBody3D4" type="StaticBody3D" parent="Graves"]
+transform = Transform3D(0.116567, 0, 0.993183, 0, 1, 0, -0.993183, 0, 0.116567, -17.6974, 0, -31.9845)
 
 [node name="Sm-3-tomb2" type="MeshInstance3D" parent="Graves/StaticBody3D4"]
 transform = Transform3D(-0.999977, 0, -0.00671939, 0, 1, 0, 0.00671939, 0, -0.999977, -26.5915, 1.80191, -5.79013)
@@ -860,6 +867,7 @@ transform = Transform3D(-0.999977, 0, -0.00671939, 0, 1, 0, 0.00671939, 0, -0.99
 shape = SubResource("ConvexPolygonShape3D_pdh5y")
 
 [node name="StaticBody3D5" type="StaticBody3D" parent="Graves"]
+transform = Transform3D(-0.0180806, 0, 0.999837, 0, 1, 0, -0.999837, 0, -0.0180806, -17.5098, 0, -29.4886)
 
 [node name="Sm-4-tomb2" type="MeshInstance3D" parent="Graves/StaticBody3D5"]
 transform = Transform3D(-0.999999, 0, -0.00153598, 0, 1, 0, 0.00153598, 0, -0.999999, -23.5099, 1.11988, -5.80479)
@@ -903,6 +911,46 @@ skeleton = NodePath("../../..")
 transform = Transform3D(-0.999027, 0, -0.0441076, 0, 1, 0, 0.0441076, 0, -0.999027, -21.4494, 1.82941, -9.00607)
 shape = SubResource("ConvexPolygonShape3D_m6hmt")
 
+[node name="Church-74-gyDirtgrave" type="MeshInstance3D" parent="Graves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.6118, 0.910417, -7.40002)
+mesh = ExtResource("17_afta4")
+skeleton = NodePath("../..")
+
+[node name="Church-74-gyDirtgrave2" type="MeshInstance3D" parent="Graves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.4591, 0.923348, -7.36712)
+mesh = ExtResource("17_afta4")
+skeleton = NodePath("../..")
+
+[node name="Church-74-gyDirtgrave3" type="MeshInstance3D" parent="Graves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.6468, 0.923348, -7.36712)
+mesh = ExtResource("17_afta4")
+skeleton = NodePath("../..")
+
+[node name="Church-74-gyDirtgrave4" type="MeshInstance3D" parent="Graves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.9024, 0.923348, -7.36712)
+mesh = ExtResource("17_afta4")
+skeleton = NodePath("../..")
+
+[node name="Church-74-gyDirtgrave5" type="MeshInstance3D" parent="Graves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.8172, 0.923348, -1.85558)
+mesh = ExtResource("17_afta4")
+skeleton = NodePath("../..")
+
+[node name="Church-74-gyDirtgrave6" type="MeshInstance3D" parent="Graves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.6479, 0.923348, -1.49105)
+mesh = ExtResource("17_afta4")
+skeleton = NodePath("../..")
+
+[node name="Church-74-gyDirtgrave7" type="MeshInstance3D" parent="Graves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -32.4031, 0.923348, -0.797835)
+mesh = ExtResource("17_afta4")
+skeleton = NodePath("../..")
+
+[node name="Church-74-gyDirtgrave8" type="MeshInstance3D" parent="Graves"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -29.3183, 0.923348, -0.797835)
+mesh = ExtResource("17_afta4")
+skeleton = NodePath("../..")
+
 [node name="Scenery" type="Node" parent="."]
 
 [node name="StaticBody3D" type="StaticBody3D" parent="Scenery"]
@@ -915,6 +963,26 @@ skeleton = NodePath("../../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Scenery/StaticBody3D"]
 transform = Transform3D(0.823965, 0.00182641, -0.566637, -0.00182788, 0.999998, 0.00056527, 0.566637, 0.00056998, 0.823967, -9.29936, 3.3667, -8.98431)
 shape = SubResource("ConcavePolygonShape3D_rmibg")
+
+[node name="Church-31-wagon2" type="MeshInstance3D" parent="Scenery"]
+transform = Transform3D(-0.393573, 0, -0.919293, 0, 1, 0, 0.919293, 0, -0.393573, -6.70954, 1.03671, -21.0757)
+mesh = ExtResource("15_3i8ff")
+skeleton = NodePath("../..")
+
+[node name="Church-73-flowerred" type="MeshInstance3D" parent="Scenery"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9409, 1.22624, -19.3037)
+mesh = ExtResource("16_7qsnb")
+skeleton = NodePath("../..")
+
+[node name="Church-73-flowerred2" type="MeshInstance3D" parent="Scenery"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.9409, 0.803511, -19.7815)
+mesh = ExtResource("16_7qsnb")
+skeleton = NodePath("../..")
+
+[node name="Church-73-flowerred3" type="MeshInstance3D" parent="Scenery"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -17.281, 0.771336, -20.4469)
+mesh = ExtResource("16_7qsnb")
+skeleton = NodePath("../..")
 
 [node name="Furnishings" type="Node" parent="."]
 
@@ -931,6 +999,131 @@ skeleton = NodePath("../../../..")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Furnishings/Church/StaticBody3D"]
 transform = Transform3D(-0.137876, 0, 1.99524, 0, 2, 0, -1.99524, 0, -0.137876, 12.6472, 1.17945, -60.5558)
 shape = SubResource("ConcavePolygonShape3D_38ex1")
+
+[node name="Church-27-chBench2" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -15.8728, 1.63685, -26.3597)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench3" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -15.8728, 1.63685, -24.3648)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench4" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -15.8728, 1.63685, -18.567)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench5" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -15.9545, 1.58082, -16.4602)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench6" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -18.1474, 1.58082, -16.4602)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench7" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -20.3313, 1.58082, -16.4602)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench8" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -22.4346, 1.58082, -16.4602)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench9" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -24.6658, 1.58082, -16.4602)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench10" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -24.6658, 1.58082, -18.5018)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench11" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -22.3873, 1.58082, -18.5018)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench12" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -20.3323, 1.58082, -18.5018)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench13" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -17.9295, 1.58082, -18.5018)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench14" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -17.9295, 1.58082, -25.8727)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench15" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -19.5897, 1.58082, -25.7542)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench16" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -21.4711, 1.58082, -25.6429)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench20" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -24.3078, 1.58082, -25.0793)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench21" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -24.3078, 1.58082, -23.5332)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench17" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -21.56, 1.52909, -23.8062)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench18" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -19.6651, 1.52909, -23.8981)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-27-chBench19" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(0.0458686, 0, 0.998948, 0, 1, 0, -0.998948, 0, 0.0458686, -18.0036, 1.52909, -23.8026)
+mesh = ExtResource("12_kxg68")
+skeleton = NodePath("../../..")
+
+[node name="Church-37-candleholderbig" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.7827, 4.03885, -24.4112)
+mesh = ExtResource("13_6smqk")
+skeleton = NodePath("../../..")
+
+[node name="Church-37-candleholderbig2" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.6808, 4.03885, -35.8195)
+mesh = ExtResource("13_6smqk")
+skeleton = NodePath("../../..")
+
+[node name="Church-38-candelabrawhite" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -26.9535, 11.3019, -31.6937)
+mesh = ExtResource("14_1sk14")
+skeleton = NodePath("../../..")
+
+[node name="Church-38-candelabrawhite2" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -33.9604, 11.3019, -31.6937)
+mesh = ExtResource("14_1sk14")
+skeleton = NodePath("../../..")
+
+[node name="Church-38-candelabrawhite3" type="MeshInstance3D" parent="Furnishings/Church"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -38.0793, 11.3019, -31.6937)
+mesh = ExtResource("14_1sk14")
+skeleton = NodePath("../../..")
 
 [node name="Fencing" type="Node" parent="Furnishings"]
 
