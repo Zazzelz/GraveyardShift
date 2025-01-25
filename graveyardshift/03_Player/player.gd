@@ -17,9 +17,9 @@ var _gravity := -30.0
 @onready var _camera: Camera3D = %Camera3D
 @onready var _skin: Node3D = %GroundsKeeper
 
+func _ready() -> void:
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("left_click"): 
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	if event.is_action_pressed("release_mouse"):
 		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
 
@@ -72,6 +72,14 @@ func _physics_process(delta: float) -> void:
 			_skin.walk()
 		else:
 			_skin.idle()
+	
+#func attack():
+	#var enemies = hitbox.get_overlapping_boddies()
+	var is_attack := Input.is_action_just_pressed("left_click")
+	
+	if is_attack:
+		_skin.attack()
+	
 	
 	
 	

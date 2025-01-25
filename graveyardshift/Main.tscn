@@ -1,10 +1,11 @@
-[gd_scene load_steps=15 format=3 uid="uid://cpcdqxhybvnkr"]
+[gd_scene load_steps=16 format=3 uid="uid://cpcdqxhybvnkr"]
 
 [ext_resource type="PackedScene" uid="uid://cobvkbplflytl" path="res://02_Environment/Cemetery.tscn" id="1_2t57h"]
 [ext_resource type="PackedScene" uid="uid://dxd36fthvajcg" path="res://02_Environment/firelight.tscn" id="1_3juaq"]
 [ext_resource type="Script" path="res://02_Environment/firelight.gd" id="2_bmw1j"]
-[ext_resource type="PackedScene" uid="uid://cetlv7j54icc6" path="res://05_Zombies/Zombie.tscn" id="3_6jby0"]
+[ext_resource type="PackedScene" uid="uid://ea41ovdqjgbl" path="res://05_Zombies/Zombie.tscn" id="3_6jby0"]
 [ext_resource type="PackedScene" uid="uid://8qejuy0wgs0h" path="res://03_Player/Player.tscn" id="3_ros2t"]
+[ext_resource type="Script" path="res://05_Zombies/zombie.gd" id="6_st7pf"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_sgeqs"]
 noise_type = 3
@@ -128,9 +129,6 @@ omni_range = 2.159
 omni_attenuation = -5.664
 script = ExtResource("2_bmw1j")
 noise = SubResource("NoiseTexture3D_ch86s")
-
-[node name="CharacterBody3D" parent="Lighting/TreeLight" instance=ExtResource("3_6jby0")]
-transform = Transform3D(-0.905702, 0, -0.423915, 0, 1, 0, 0.423915, 0, -0.905702, -13.2581, -3.73117, -2.25031)
 
 [node name="Node3D" parent="Lighting" instance=ExtResource("1_3juaq")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.6187, 6.65921, -27.4957)
@@ -291,13 +289,49 @@ environment = SubResource("Environment_muan6")
 
 [node name="Player" parent="." instance=ExtResource("3_ros2t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -5)
+collision_layer = 2
+collision_mask = 3
 
 [node name="Environment" parent="." instance=ExtResource("1_2t57h")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.40114, 9.83706)
 
+[node name="Zombie" parent="." instance=ExtResource("3_6jby0")]
+script = ExtResource("6_st7pf")
+
+[node name="Skeleton3D" parent="Zombie/Walking" index="0"]
+bones/0/position = Vector3(-8.18225e-05, 0.0342454, 0.00012125)
+bones/0/rotation = Quaternion(-0.0881783, 0.101361, -0.0217854, 0.990695)
+bones/1/rotation = Quaternion(0.0213711, 0.01221, -0.0106997, 0.99964)
+bones/2/rotation = Quaternion(0.0120825, 0.0301755, -0.0266076, 0.999117)
+bones/3/rotation = Quaternion(0.0115257, 0.0301941, -0.0267834, 0.999119)
+bones/4/rotation = Quaternion(0.070184, -0.00936705, -0.035326, 0.996864)
+bones/5/rotation = Quaternion(0.133972, -0.139035, 0.0826244, 0.977698)
+bones/7/rotation = Quaternion(0.47323, 0.54335, -0.429046, 0.544741)
+bones/8/rotation = Quaternion(0.0619139, -0.121944, 0.671831, 0.727969)
+bones/9/rotation = Quaternion(-0.0229954, 0.0010419, 0.28565, 0.958058)
+bones/10/rotation = Quaternion(0.113214, -0.103714, -0.00686099, 0.988119)
+bones/11/rotation = Quaternion(0.118007, 3.9253e-06, -0.00450115, 0.993003)
+bones/12/rotation = Quaternion(0.225064, -0.0173989, 0.137825, 0.96439)
+bones/13/rotation = Quaternion(-0.14382, 0.00316462, -0.387316, 0.910655)
+bones/15/rotation = Quaternion(0.427459, -0.516041, 0.588927, 0.451824)
+bones/16/rotation = Quaternion(0.234454, 0.157694, -0.596085, 0.751563)
+bones/17/rotation = Quaternion(0.0370972, 0.0021087, -0.146421, 0.988524)
+bones/18/rotation = Quaternion(0.0416187, 0.0517909, 0.0256661, 0.99746)
+bones/19/rotation = Quaternion(0.0987772, -0.00146607, 0.03711, 0.994416)
+bones/20/rotation = Quaternion(0.260504, 0.00858341, 0.0110683, 0.965371)
+bones/21/rotation = Quaternion(-0.201579, 0.0392372, 0.244804, 0.947574)
+bones/23/rotation = Quaternion(0.0463351, -0.0851788, 0.990366, -0.0988598)
+bones/24/rotation = Quaternion(-0.245178, 0.0759409, 0.0243109, 0.966193)
+bones/25/rotation = Quaternion(0.71492, 0.14732, -0.120692, 0.67277)
+bones/26/rotation = Quaternion(0.265926, 0.157039, -0.0348406, 0.950478)
+bones/28/rotation = Quaternion(-0.0518632, 0.127298, 0.988421, 0.0642548)
+bones/29/rotation = Quaternion(-0.240024, -0.0947866, -0.00896074, 0.966087)
+bones/30/rotation = Quaternion(0.541911, 0.00532659, 0.0901397, 0.835571)
+bones/31/rotation = Quaternion(0.25383, -0.144491, 0.0383789, 0.955625)
+
 [editable path="Lighting/TreeLight"]
-[editable path="Lighting/TreeLight/CharacterBody3D"]
-[editable path="Lighting/TreeLight/CharacterBody3D/Walking"]
 [editable path="Lighting/Node3D"]
 [editable path="Lighting/Node3D2"]
 [editable path="Environment"]
+[editable path="Zombie"]
+[editable path="Zombie/Walking"]

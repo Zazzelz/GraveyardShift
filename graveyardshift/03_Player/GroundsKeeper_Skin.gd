@@ -13,4 +13,7 @@ func walk():
 	
 func jump():
 	state_machine.travel("PlayerAnimations_Jump")
+
+func attack():
+	state_machine.travel("PlayerAnimations_HeavyAttack")
 	

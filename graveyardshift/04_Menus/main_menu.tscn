@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cobvkbplflytl" path="res://02_Environment/Cemetery.tscn" id="1_hxjwr"]
 [ext_resource type="PackedScene" uid="uid://dxd36fthvajcg" path="res://02_Environment/firelight.tscn" id="1_jwoio"]
 [ext_resource type="FontFile" uid="uid://g8fjfgnibhrd" path="res://01_Assets/Haedus_Font_1_21/Haedus.woff" id="2_w7hus"]
+[ext_resource type="Script" path="res://04_Menus/control.gd" id="3_27mjw"]
 [ext_resource type="PackedScene" uid="uid://c2fbpx8xoecm0" path="res://04_Menus/GroundsKeeperFullAnimations.tscn" id="4_5mt3n"]
 [ext_resource type="Script" path="res://04_Menus/grounds_keeper.gd" id="5_c2dn4"]
 
@@ -28,8 +29,6 @@ frequency = 0.3052
 
 [sub_resource type="NoiseTexture3D" id="NoiseTexture3D_5e35u"]
 noise = SubResource("FastNoiseLite_g5ct7")
-
-[sub_resource type="BoxShape3D" id="BoxShape3D_ic38y"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6222m"]
 sky_top_color = Color(0.0497727, 0.258326, 0.306184, 1)
@@ -524,13 +523,6 @@ omni_range = 2.159
 omni_attenuation = -9.303
 noise = SubResource("NoiseTexture3D_5e35u")
 
-[node name="RigidBody3D" type="RigidBody3D" parent="NavigationRegion3D/Background/Lighting/Node3D2"]
-transform = Transform3D(0.097027, 0, -0.995282, 0, 1, 0, 0.995282, 0, 0.097027, -7.17949, 0, -7.05386)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/Background/Lighting/Node3D2/RigidBody3D"]
-transform = Transform3D(2, 0, 5.96046e-08, 0, 2, 0, -5.96046e-08, 0, 2, -0.521978, 0.384232, -1.51858)
-shape = SubResource("BoxShape3D_ic38y")
-
 [node name="WorldEnvironment" type="WorldEnvironment" parent="NavigationRegion3D/Background"]
 environment = SubResource("Environment_88iwn")
 
@@ -561,7 +553,7 @@ size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="NavigationRegion3D/Background/SubViewportContainer/SubViewport"]
-transform = Transform3D(0.137716, -0.0866465, 0.986674, 0.0235766, 0.996171, 0.0841895, -0.990191, 0.0116682, 0.139231, 1.9046, 58.4285, -20.4618)
+transform = Transform3D(0.137716, -0.0866465, 0.986674, 0.0235766, 0.996171, 0.0841896, -0.990191, 0.0116682, 0.139232, 1.9046, 58.4285, -20.4618)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -570,6 +562,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("3_27mjw")
 
 [node name="MarginContainer" type="MarginContainer" parent="Control"]
 layout_mode = 1
@@ -678,39 +671,46 @@ autoplay = "Opening_Scene_Animation"
 [node name="GroundsKeeperFullAnimations" parent="." instance=ExtResource("4_5mt3n")]
 transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, -23.7597, 0.828402, -16.1529)
 script = ExtResource("5_c2dn4")
-stage_path = NodePath("../NavigationRegion3D/Background/Lighting/Node3D2/RigidBody3D/CollisionShape3D")
+stage_path = NodePath("../NavigationRegion3D/Background/SubViewportContainer/SubViewport/Camera3D")
 
 [node name="Skeleton3D" parent="GroundsKeeperFullAnimations/Armature" index="0"]
-bones/1/rotation = Quaternion(0.117654, 0.0142739, -0.00889597, 0.992912)
-bones/2/rotation = Quaternion(0.0563311, 0.0247375, -0.00928077, 0.998062)
-bones/3/rotation = Quaternion(-0.0303906, 0.0257501, -0.0067788, 0.999183)
-bones/4/rotation = Quaternion(-0.0575029, -0.048629, 0.0283503, 0.996757)
-bones/5/rotation = Quaternion(-0.0533658, -0.0334453, -0.0173407, 0.997864)
-bones/7/rotation = Quaternion(0.683079, 0.294709, -0.559309, 0.365681)
-bones/8/rotation = Quaternion(0.312532, 0.00529806, 0.0281749, 0.949475)
-bones/9/rotation = Quaternion(0.0256108, 0.343382, 0.124535, 0.93055)
-bones/10/rotation = Quaternion(-0.0803802, -0.119222, 0.0699715, 0.987132)
-bones/11/rotation = Quaternion(0.193815, -0.03677, -0.0148476, 0.980236)
-bones/12/rotation = Quaternion(-0.174098, 0.0859252, 0.0632083, 0.978934)
-bones/13/rotation = Quaternion(0.254554, 0.249583, 0.0274549, 0.933893)
-bones/15/rotation = Quaternion(0.665905, -0.345165, 0.599009, 0.280393)
-bones/16/rotation = Quaternion(0.224986, 0.139453, -0.23753, 0.93462)
-bones/17/rotation = Quaternion(0.0160937, -0.195743, -0.227109, 0.953859)
-bones/18/rotation = Quaternion(-0.00257822, 0.131447, -0.0392651, 0.990542)
-bones/19/rotation = Quaternion(0.0732657, 0.0916133, 0.0297806, 0.992649)
-bones/20/rotation = Quaternion(-0.467863, -0.0517804, -0.0389581, 0.881422)
-bones/21/rotation = Quaternion(0.23277, -0.0517814, -0.0349939, 0.970522)
-bones/23/rotation = Quaternion(0.0295423, 0.27669, 0.958934, -0.0549167)
-bones/24/rotation = Quaternion(-0.606164, 0.0626711, -0.078451, 0.788976)
-bones/25/rotation = Quaternion(0.552041, -0.291787, 0.100009, 0.774667)
-bones/26/rotation = Quaternion(0.306904, 0.0253979, -0.00617519, 0.951382)
-bones/28/rotation = Quaternion(-0.0385571, 0.134189, 0.987491, 0.0732616)
-bones/29/rotation = Quaternion(-0.329511, -0.0461524, 0.0886204, 0.93885)
-bones/30/rotation = Quaternion(0.725035, 0.290155, -0.113177, 0.614268)
-bones/31/rotation = Quaternion(0.118058, -0.131789, -0.0592005, 0.982441)
+bones/1/rotation = Quaternion(0.109745, 0.0389238, -0.00625465, 0.993178)
+bones/2/rotation = Quaternion(0.0407334, 0.0621351, -0.0179595, 0.997075)
+bones/3/rotation = Quaternion(-0.0453074, 0.0629244, -0.0115777, 0.996922)
+bones/4/rotation = Quaternion(0.0176167, -0.068038, 0.0483109, 0.996357)
+bones/5/rotation = Quaternion(-0.0766917, -0.0494245, -0.00351189, 0.995823)
+bones/7/rotation = Quaternion(0.609548, 0.359815, -0.610346, 0.355616)
+bones/8/rotation = Quaternion(0.37931, 0.11691, -0.140072, 0.907103)
+bones/9/rotation = Quaternion(-0.0201234, 0.407111, 0.134682, 0.90317)
+bones/10/rotation = Quaternion(-0.076396, -0.185881, -0.0309605, 0.979108)
+bones/11/rotation = Quaternion(0.129304, -0.0710132, -0.0257815, 0.988723)
+bones/12/rotation = Quaternion(-0.298752, 0.0710928, 0.0476981, 0.950483)
+bones/13/rotation = Quaternion(0.165098, 0.241667, -0.0109658, 0.956148)
+bones/15/rotation = Quaternion(0.660604, -0.348615, 0.605817, 0.273965)
+bones/16/rotation = Quaternion(0.286846, 0.104692, -0.227585, 0.924643)
+bones/17/rotation = Quaternion(0.0130666, -0.211814, -0.355476, 0.910275)
+bones/18/rotation = Quaternion(0.000585715, 0.130309, -0.0407109, 0.990637)
+bones/19/rotation = Quaternion(0.161931, 0.0445768, 0.0165244, 0.985656)
+bones/20/rotation = Quaternion(-0.306939, -0.0706007, -0.0633109, 0.946993)
+bones/21/rotation = Quaternion(0.359365, -0.0563499, -0.0647376, 0.929242)
+bones/23/rotation = Quaternion(0.0257376, 0.3712, 0.925774, -0.0670085)
+bones/24/rotation = Quaternion(-0.237392, -0.0510305, 0.0236941, 0.969783)
+bones/25/rotation = Quaternion(0.536549, -0.296222, 0.0960067, 0.784315)
+bones/26/rotation = Quaternion(0.137736, 0.0789686, -0.0341906, 0.986724)
+bones/28/rotation = Quaternion(-0.0575967, -0.0910637, 0.988736, 0.103883)
+bones/29/rotation = Quaternion(-0.319278, -0.114695, 0.10459, 0.934862)
+bones/30/rotation = Quaternion(0.745357, 0.318618, -0.056929, 0.582825)
+bones/31/rotation = Quaternion(0.256527, -0.0676207, -0.00803335, 0.964135)
+
+[node name="Igor_Tpose" parent="GroundsKeeperFullAnimations/Armature/Skeleton3D" index="0"]
+surface_material_override/0 = null
 
 [node name="NavigationAgent3D" parent="GroundsKeeperFullAnimations" index="3"]
 simplify_path = true
+
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/StartGame" to="Control" method="_on_start_game_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Settings" to="Control" method="_on_settings_pressed"]
+[connection signal="pressed" from="Control/MarginContainer/VBoxContainer/QuitGame" to="Control" method="_on_quit_game_pressed"]
 
 [editable path="NavigationRegion3D/Background/Lighting/TreeLight"]
 [editable path="NavigationRegion3D/Background/Lighting/Node3D"]
