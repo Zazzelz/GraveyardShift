@@ -73,7 +73,7 @@ transitions = ["Start", "PlayerAnimations_Idle", SubResource("AnimationNodeState
 graph_offset = Vector2(127, 25)
 
 [sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_r1c63"]
-graph_offset = Vector2(-154.026, 82.5841)
+graph_offset = Vector2(-37, 81)
 nodes/StateMachine/node = SubResource("AnimationNodeStateMachine_guhxp")
 nodes/StateMachine/position = Vector2(40, 200)
 nodes/output/position = Vector2(280, 200)
@@ -142,7 +142,9 @@ transform = Transform3D(-0.000131615, 1.80032e-05, 0.00999911, -0.0097891, 0.002
 mesh = ExtResource("5_uy460")
 skeleton = NodePath("../..")
 
-[node name="CollisionShape3D2" type="CollisionShape3D" parent="GroundsKeeper/Skeleton3D/BoneAttachment3D/Sm-10-spade"]
+[node name="Area3D" type="Area3D" parent="GroundsKeeper/Skeleton3D/BoneAttachment3D/Sm-10-spade"]
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="GroundsKeeper/Skeleton3D/BoneAttachment3D/Sm-10-spade/Area3D"]
 transform = Transform3D(-0.0222183, -0.392017, -1.37355, -1.33287, 0.49962, -0.121033, 0.513591, 1.27966, -0.373527, -0.0540619, 0.0206591, 1.14804)
 shape = SubResource("BoxShape3D_p267d")
 
