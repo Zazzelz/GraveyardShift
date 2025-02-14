@@ -291,19 +291,97 @@ environment = SubResource("Environment_muan6")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.40114, 9.83706)
 
 [node name="NavigationRegion3D" parent="Environment" index="0"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0487345, -0.645684)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.599703, -0.645684)
 
 [node name="Player" parent="." instance=ExtResource("3_ros2t")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -5)
 collision_layer = 2
 collision_mask = 3
 
-[node name="CharacterBody3D" parent="." instance=ExtResource("5_8gcc7")]
-transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 3.78126, -0.185645, -3.40423)
+[node name="Zombie" parent="." instance=ExtResource("5_8gcc7")]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 3.38173, 0.471674, 1.71158)
 script = ExtResource("6_ayh6m")
 player_path = NodePath("../Player")
+
+[node name="Skeleton3D" parent="Zombie/Armature" index="0"]
+bones/0/position = Vector3(0, 0.00456418, -0.00142333)
+bones/0/rotation = Quaternion(0, 0, 0, 1)
+bones/1/rotation = Quaternion(0.0142405, 0, 0, 0.999899)
+bones/2/rotation = Quaternion(1.39642e-08, 0, 0, 1)
+bones/3/rotation = Quaternion(1.73472e-18, 0, 0, 1)
+bones/4/rotation = Quaternion(-0.0142405, 0, 0, 0.999899)
+bones/5/rotation = Quaternion(0, 0, 0, 1)
+bones/7/rotation = Quaternion(0.644498, 0.33195, -0.583075, 0.36668)
+bones/8/rotation = Quaternion(0.437228, -0.0173906, 0.00845656, 0.899143)
+bones/9/rotation = Quaternion(0.0596332, 0.00108543, 0.0181663, 0.998054)
+bones/10/rotation = Quaternion(-0.0174002, 0.000278188, -0.0159832, 0.999721)
+bones/11/rotation = Quaternion(0.0124927, 3.97907e-06, 0.000318498, 0.999922)
+bones/12/rotation = Quaternion(-1.47723e-17, 0, -1.30104e-18, 1)
+bones/13/rotation = Quaternion(3.03035e-17, 0, 3.46945e-18, 1)
+bones/15/rotation = Quaternion(0.563792, -0.375803, 0.662082, 0.320246)
+bones/16/rotation = Quaternion(0.447129, 0.068394, -0.0343147, 0.891191)
+bones/17/rotation = Quaternion(0.052574, 0.00212857, 0.0403977, 0.997797)
+bones/18/rotation = Quaternion(-0.0991233, -0.00531044, 0.0532333, 0.993636)
+bones/19/rotation = Quaternion(0.107835, -0.00146559, -0.0135105, 0.994076)
+bones/20/rotation = Quaternion(2.86229e-17, -6.93889e-18, 1.73472e-18, 1)
+bones/21/rotation = Quaternion(4.46691e-17, 1.54074e-33, 5.20417e-18, 1)
+bones/23/rotation = Quaternion(-0.000348897, -0.0187812, 0.999651, -0.0185704)
+bones/24/rotation = Quaternion(0.00119615, -2.86871e-05, -0.023976, 0.999712)
+bones/25/rotation = Quaternion(0.534843, 0.0212933, -0.0134843, 0.844576)
+bones/26/rotation = Quaternion(0.240822, 0.15472, -0.0389193, 0.957367)
+bones/28/rotation = Quaternion(0.000234204, -0.0126024, 0.999748, 0.0185794)
+bones/29/rotation = Quaternion(0.00134235, 3.22058e-05, 0.0239851, 0.999711)
+bones/30/rotation = Quaternion(0.517477, -0.0231281, 0.0139935, 0.85527)
+bones/31/rotation = Quaternion(0.253757, -0.14453, 0.0383779, 0.955639)
+
+[node name="HeadCollision" parent="Zombie/Armature/Skeleton3D" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0215168, -0.000977929)
+
+[node name="TorsoCollision" parent="Zombie/Armature/Skeleton3D" index="2"]
+transform = Transform3D(1, 0, 0, 0, 0.999594, -0.0284781, 0, 0.0284781, 0.999594, 0, 0.0104166, -0.00125659)
+
+[node name="leftbicepCollision" parent="Zombie/Armature/Skeleton3D" index="3"]
+transform = Transform3D(0.0799416, 0.125865, -0.988821, -0.00458251, -0.991939, -0.126633, -0.996789, 0.0146545, -0.0787204, 0.00510288, 0.0149971, -0.000614485)
+
+[node name="leftforearmCollision" parent="Zombie/Armature/Skeleton3D" index="4"]
+transform = Transform3D(0.084469, 0.00425572, -0.996417, -0.0406775, -0.999143, -0.00771578, -0.995595, 0.0411835, -0.0842235, 0.00642183, 0.00460254, -0.00046092)
+
+[node name="rightbicepCollision" parent="Zombie/Armature/Skeleton3D" index="5"]
+transform = Transform3D(-0.234486, -0.125517, 0.963982, 0.103855, -0.989189, -0.103536, 0.966556, 0.0758367, 0.244987, -0.00510288, 0.0149971, -0.0019494)
+
+[node name="rightforearmCollision" parent="Zombie/Armature/Skeleton3D" index="6"]
+transform = Transform3D(-0.243866, -0.00425849, 0.9698, 0.023548, -0.999721, 0.00153133, 0.969523, 0.0232104, 0.243898, -0.00642183, 0.00460254, -0.00115249)
+
+[node name="leftcalfcollision" parent="Zombie/Armature/Skeleton3D" index="7"]
+transform = Transform3D(-0.999941, -0.0108067, 2.58608e-05, 0.0107991, -0.999323, -0.035171, 0.000405927, -0.0351686, 0.999381, 0.00353209, -0.0133705, -0.00152538)
+
+[node name="leftquadCollision" parent="Zombie/Armature/Skeleton3D" index="8"]
+transform = Transform3D(-0.99931, 0.037141, 4.07454e-10, -0.0371148, -0.998605, -0.0375622, -0.0013951, -0.0375363, 0.999294, 0.00292102, 0.00305926, -0.000907801)
+
+[node name="leftfoorcollision" parent="Zombie/Armature/Skeleton3D" index="9"]
+transform = Transform3D(-0.944129, -0.198304, -0.263241, -0.267987, -0.00300944, 0.963418, -0.191842, 0.980136, -0.0503016, 0.00309858, -0.0319419, 0.00247252)
+
+[node name="rightquadCollision" parent="Zombie/Armature/Skeleton3D" index="10"]
+transform = Transform3D(-0.99931, -0.0371554, 0, 0.0371436, -0.998992, -0.0252071, 0.000936581, -0.0251897, 0.999682, -0.00292102, 0.00305926, -0.00107367)
+
+[node name="BoneAttachment3D" parent="Zombie/Armature/Skeleton3D" index="11"]
+transform = Transform3D(-0.999942, 0.0108107, -2.9032e-05, -0.0108073, -0.999688, -0.0225225, -0.000272507, -0.0225209, 0.999746, -0.00353209, -0.0133705, -0.00148795)
+
+[node name="BoneAttachment3D2" parent="Zombie/Armature/Skeleton3D" index="12"]
+transform = Transform3D(-0.998482, 0.0528611, 0.0154877, -0.0120087, -0.483303, 0.875372, 0.0537583, 0.873856, 0.483204, -0.00335678, -0.0295812, -0.00185314)
+
+[node name="CollisionShape3D" parent="Zombie" index="1"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0267713, -0.0255363, -0.14378)
+
+[node name="NavigationAgent3D" parent="Zombie" index="2"]
+path_height_offset = 0.15
+path_max_distance = 1.01
+navigation_layers = 3
+simplify_path = true
 
 [editable path="Lighting/TreeLight"]
 [editable path="Lighting/Node3D"]
 [editable path="Lighting/Node3D2"]
 [editable path="Environment"]
+[editable path="Zombie"]
+[editable path="Zombie/Armature"]

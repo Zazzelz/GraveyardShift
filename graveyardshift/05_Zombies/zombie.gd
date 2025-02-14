@@ -1,12 +1,10 @@
 extends CharacterBody3D
 
 var player = null
-const SPEED = 4.0
+const SPEED = 2.0
 
 @export var player_path : NodePath
-
-@onready var nav_agent = $NavigationAgent3D
-
+@onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
 
 func _ready() -> void:
 	player = get_node(player_path)
