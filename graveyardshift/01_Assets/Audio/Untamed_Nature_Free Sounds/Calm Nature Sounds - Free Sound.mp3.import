@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cmh80phw165xr"
+path="res://.godot/imported/Calm Nature Sounds - Free Sound.mp3-14a2b1f1f7dbb1a1688de69586dba054.mp3str"
+
+[deps]
+
+source_file="res://01_Assets/Audio/Untamed_Nature_Free Sounds/Calm Nature Sounds - Free Sound.mp3"
+dest_files=["res://.godot/imported/Calm Nature Sounds - Free Sound.mp3-14a2b1f1f7dbb1a1688de69586dba054.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

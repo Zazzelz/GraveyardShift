@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c8clvlcp8ptg"
+path="res://.godot/imported/DavidKBD - Spooky Pack - Spooky Playtime-07 - Abandoned Castle.ogg-468952717b55b8dcdb3de236eb48686c.oggvorbisstr"
+
+[deps]
+
+source_file="res://01_Assets/Audio/DavidKBD - Spooky Pack - Spooky Playtime-07 - Abandoned Castle.ogg"
+dest_files=["res://.godot/imported/DavidKBD - Spooky Pack - Spooky Playtime-07 - Abandoned Castle.ogg-468952717b55b8dcdb3de236eb48686c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

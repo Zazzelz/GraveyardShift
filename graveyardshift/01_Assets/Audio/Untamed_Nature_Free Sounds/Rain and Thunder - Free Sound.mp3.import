@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://1ki6v7aaqtxg"
+path="res://.godot/imported/Rain and Thunder - Free Sound.mp3-fb8c8f27c52bd8256537352d2febd1fc.mp3str"
+
+[deps]
+
+source_file="res://01_Assets/Audio/Untamed_Nature_Free Sounds/Rain and Thunder - Free Sound.mp3"
+dest_files=["res://.godot/imported/Rain and Thunder - Free Sound.mp3-fb8c8f27c52bd8256537352d2febd1fc.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

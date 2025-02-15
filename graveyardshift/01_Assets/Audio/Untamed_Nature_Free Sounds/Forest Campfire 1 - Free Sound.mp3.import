@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgaiucugy5j86"
+path="res://.godot/imported/Forest Campfire 1 - Free Sound.mp3-5e0245ccf6b8bb0d1dd73995222fd324.mp3str"
+
+[deps]
+
+source_file="res://01_Assets/Audio/Untamed_Nature_Free Sounds/Forest Campfire 1 - Free Sound.mp3"
+dest_files=["res://.godot/imported/Forest Campfire 1 - Free Sound.mp3-5e0245ccf6b8bb0d1dd73995222fd324.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

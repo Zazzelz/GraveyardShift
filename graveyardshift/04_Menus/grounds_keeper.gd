@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 	
 	#Conditions
 	if global_position.distance_to(stage_marker.global_position) <= 9:
-		print("Point Met")
+		
 		animation_player.play("MenuDance1")
 	else:
 		print(distance)

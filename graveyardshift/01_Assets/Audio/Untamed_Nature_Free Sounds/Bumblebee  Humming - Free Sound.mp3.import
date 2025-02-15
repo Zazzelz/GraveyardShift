@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bd80v2o05nu10"
+path="res://.godot/imported/Bumblebee  Humming - Free Sound.mp3-f0225153aa8de72a98dcd57c75c81c5e.mp3str"
+
+[deps]
+
+source_file="res://01_Assets/Audio/Untamed_Nature_Free Sounds/Bumblebee  Humming - Free Sound.mp3"
+dest_files=["res://.godot/imported/Bumblebee  Humming - Free Sound.mp3-f0225153aa8de72a98dcd57c75c81c5e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

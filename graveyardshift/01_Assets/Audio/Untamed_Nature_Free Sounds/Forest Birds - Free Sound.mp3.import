@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bf841tkkvmt12"
+path="res://.godot/imported/Forest Birds - Free Sound.mp3-224e0fc9f7027a9672a4d548969a96a5.mp3str"
+
+[deps]
+
+source_file="res://01_Assets/Audio/Untamed_Nature_Free Sounds/Forest Birds - Free Sound.mp3"
+dest_files=["res://.godot/imported/Forest Birds - Free Sound.mp3-224e0fc9f7027a9672a4d548969a96a5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
