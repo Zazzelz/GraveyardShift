@@ -1,7 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://ea41ovdqjgbl"]
+[gd_scene load_steps=14 format=3 uid="uid://ea41ovdqjgbl"]
 
+[ext_resource type="Script" path="res://05_Zombies/zombie.gd" id="1_2jaro"]
 [ext_resource type="PackedScene" uid="uid://df4ctm8q3ybs8" path="res://05_Zombies/ZombieAnimations/Walking.fbx" id="1_obx2v"]
+[ext_resource type="Texture2D" uid="uid://cvjtbcj4iajew" path="res://01_Assets/Zombies/Zed_1.png" id="2_jnigc"]
 [ext_resource type="AnimationLibrary" uid="uid://bif6f4nh0jfpi" path="res://05_Zombies/ZombieAnimations/ZombieAnimations.res" id="3_d7x0b"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6j3fb"]
+albedo_texture = ExtResource("2_jnigc")
 
 [sub_resource type="Animation" id="Animation_0rr6i"]
 resource_name = "mixamo_com"
@@ -220,20 +225,33 @@ _data = {
 radius = 0.00938756
 height = 0.0612803
 
-[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_saiay"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_yeqqk"]
+animation = &"ZombieAnimations/Zombie_death"
+play_mode = 1
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_s2yjm"]
 animation = &"ZombieAnimations/Zombie_walk"
 
-[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_yyvxh"]
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_vmwcw"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_plq2d"]
+xfade_time = 1.0
+switch_mode = 2
 advance_mode = 2
 
 [sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_pfg43"]
-states/End/position = Vector2(608, 100)
+states/End/position = Vector2(979, 77)
 states/Start/position = Vector2(173, 100)
-states/ZombieAnimations_Zombie_walk/node = SubResource("AnimationNodeAnimation_saiay")
-states/ZombieAnimations_Zombie_walk/position = Vector2(396, 100)
-transitions = ["Start", "ZombieAnimations_Zombie_walk", SubResource("AnimationNodeStateMachineTransition_yyvxh")]
+states/ZombieAnimations_Zombie_death/node = SubResource("AnimationNodeAnimation_yeqqk")
+states/ZombieAnimations_Zombie_death/position = Vector2(382, 100)
+states/ZombieAnimations_Zombie_walk/node = SubResource("AnimationNodeAnimation_s2yjm")
+states/ZombieAnimations_Zombie_walk/position = Vector2(720, 100)
+transitions = ["Start", "ZombieAnimations_Zombie_death", SubResource("AnimationNodeStateMachineTransition_vmwcw"), "ZombieAnimations_Zombie_death", "ZombieAnimations_Zombie_walk", SubResource("AnimationNodeStateMachineTransition_plq2d")]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
+transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, 1.13655, 0)
+script = ExtResource("1_2jaro")
 
 [node name="Armature" parent="." instance=ExtResource("1_obx2v")]
 transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.0029639, -0.0405937, -0.000257283)
@@ -241,35 +259,38 @@ transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, -0.002
 [node name="Skeleton3D" parent="Armature" index="0"]
 modifier_callback_mode_process = 0
 animate_physical_bones = false
-bones/0/position = Vector3(-8.18225e-05, 0.0342454, 0.00012125)
-bones/0/rotation = Quaternion(-0.0881783, 0.101361, -0.0217854, 0.990695)
-bones/1/rotation = Quaternion(0.00413688, 0.000846841, -0.00318672, 0.999986)
-bones/2/rotation = Quaternion(-0.0181537, 0.00435819, -0.0164182, 0.999691)
-bones/3/rotation = Quaternion(-0.0183305, 0.00428872, -0.0162379, 0.999691)
-bones/4/rotation = Quaternion(0.0710241, -0.0309063, -0.0112162, 0.996933)
-bones/5/rotation = Quaternion(0.277475, -0.199212, 0.0558257, 0.938193)
-bones/7/rotation = Quaternion(0.498052, 0.524198, -0.325926, 0.609043)
-bones/8/rotation = Quaternion(0.0982012, -0.10791, 0.674957, 0.723287)
-bones/9/rotation = Quaternion(-0.0278762, 0.00101984, 0.346282, 0.937716)
-bones/10/rotation = Quaternion(0.116011, -0.104086, -0.00664259, 0.987757)
+bones/0/position = Vector3(-0.00482836, 0.0342762, 0.000113543)
+bones/0/rotation = Quaternion(-0.0600552, 0.365728, -0.0109107, 0.928718)
+bones/1/rotation = Quaternion(0.0109764, -0.0030335, 0.00811133, 0.999902)
+bones/2/rotation = Quaternion(-0.00505218, -0.00244618, 0.0029763, 0.99998)
+bones/3/rotation = Quaternion(-0.00502299, -0.0024465, 0.00305946, 0.99998)
+bones/4/rotation = Quaternion(0.0874173, -0.0424833, -0.00596367, 0.995248)
+bones/5/rotation = Quaternion(0.246662, -0.236195, 0.0116626, 0.939805)
+bones/7/rotation = Quaternion(0.485994, 0.532268, -0.304176, 0.622879)
+bones/8/rotation = Quaternion(0.0967953, -0.130808, 0.679535, 0.715369)
+bones/9/rotation = Quaternion(-0.0286956, 0.00101565, 0.35646, 0.933869)
+bones/10/rotation = Quaternion(0.0998972, -0.100499, -0.00606473, 0.989891)
 bones/11/rotation = Quaternion(0.118007, 3.9253e-06, -0.00450115, 0.993003)
 bones/12/rotation = Quaternion(0.225064, -0.0173989, 0.137825, 0.96439)
 bones/13/rotation = Quaternion(-0.14382, 0.00316462, -0.387316, 0.910655)
-bones/15/rotation = Quaternion(0.484242, -0.456962, 0.649861, 0.366574)
-bones/16/rotation = Quaternion(0.124169, 0.168582, -0.562842, 0.799607)
-bones/17/rotation = Quaternion(0.0423389, 0.00210122, -0.167109, 0.985027)
-bones/18/rotation = Quaternion(0.0120319, -0.0347256, 0.115886, 0.992582)
+bones/15/rotation = Quaternion(0.481318, -0.458786, 0.651273, 0.365639)
+bones/16/rotation = Quaternion(0.063041, 0.181233, -0.579759, 0.791871)
+bones/17/rotation = Quaternion(0.0419091, 0.00210186, -0.165413, 0.985331)
+bones/18/rotation = Quaternion(0.00582788, -0.0337994, 0.114118, 0.992875)
 bones/19/rotation = Quaternion(0.0987772, -0.00146607, 0.03711, 0.994416)
 bones/20/rotation = Quaternion(0.260504, 0.00858341, 0.0110683, 0.965371)
 bones/21/rotation = Quaternion(-0.201579, 0.0392372, 0.244804, 0.947574)
-bones/23/rotation = Quaternion(0.100666, -0.0413681, 0.98379, -0.142524)
-bones/24/rotation = Quaternion(-0.245909, -0.0808819, 0.0309126, 0.965418)
-bones/25/rotation = Quaternion(0.631985, -0.0521024, 0.0984662, 0.766932)
-bones/26/rotation = Quaternion(0.286459, 0.158865, -0.0314631, 0.944306)
-bones/28/rotation = Quaternion(-0.0460336, 0.0268445, 0.998296, -0.0237636)
-bones/29/rotation = Quaternion(-0.295868, 0.0807095, -0.0016914, 0.951812)
-bones/30/rotation = Quaternion(0.677948, 0.0343425, -0.0378282, 0.733333)
-bones/31/rotation = Quaternion(0.260662, -0.145201, 0.0373168, 0.953719)
+bones/23/rotation = Quaternion(0.101716, -0.0326953, 0.971644, -0.210935)
+bones/24/rotation = Quaternion(-0.178893, -0.041085, 0.0428577, 0.982076)
+bones/25/rotation = Quaternion(0.624231, 0.00201087, -0.0501845, 0.779624)
+bones/26/rotation = Quaternion(0.268936, 0.15731, -0.0343478, 0.949604)
+bones/28/rotation = Quaternion(-0.0945316, 0.0780492, 0.992371, 0.0130884)
+bones/29/rotation = Quaternion(-0.340872, 0.081652, 0.0447398, 0.935488)
+bones/30/rotation = Quaternion(0.676538, 0.0300217, -0.0349013, 0.734968)
+bones/31/rotation = Quaternion(0.254547, -0.144602, 0.0382579, 0.955423)
+
+[node name="Zed_1" parent="Armature/Skeleton3D" index="0"]
+surface_material_override/0 = SubResource("StandardMaterial3D_6j3fb")
 
 [node name="AnimationPlayer" parent="Armature" index="1"]
 libraries = {
@@ -292,8 +313,9 @@ debug_path_custom_color = Color(1, 0.145098, 1, 1)
 debug_path_custom_point_size = 24.21
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
+deterministic = false
+reset_on_save = false
 root_node = NodePath("../Armature")
-root_motion_track = NodePath("Skeleton3D:mixamorig_Hips")
 tree_root = SubResource("AnimationNodeStateMachine_pfg43")
 anim_player = NodePath("../Armature/AnimationPlayer")
 

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://c158oakf41jtp"]
+
+[ext_resource type="Script" path="res://audio_stream_player.gd" id="1_6f00k"]
+[ext_resource type="AudioStream" uid="uid://k5jmr54cln0a" path="res://01_Assets/Audio/DavidKBD - Spooky Pack - Spooky Playtime-08 - Whispers of Darkness.ogg" id="1_su4xi"]
+
+[node name="audio_player" type="AudioStreamPlayer"]
+stream = ExtResource("1_su4xi")
+autoplay = true
+bus = &"Music"
+parameters/looping = true
+script = ExtResource("1_6f00k")
