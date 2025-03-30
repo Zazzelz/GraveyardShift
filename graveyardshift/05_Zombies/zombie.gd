@@ -1,7 +1,7 @@
 extends CharacterBody3D
 
 var player = null
-const SPEED = 2.0
+const SPEED = 3
 
 @export var player_path := "/root/Main/Player"
 @onready var nav_agent: NavigationAgent3D = $NavigationAgent3D
@@ -20,5 +20,7 @@ func _process(delta: float) -> void:
 	#distance = global_position.distance_to(player.global_position)
 	
 	look_at(Vector3(player.global_position.x, global_position.y, player.global_position.z), Vector3.UP)
-	
-	move_and_slide()
+	move_and_collide(velocity)
+
+func take_damage():
+	queue_free()

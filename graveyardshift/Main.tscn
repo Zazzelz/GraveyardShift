@@ -1,11 +1,10 @@
-[gd_scene load_steps=16 format=3 uid="uid://cpcdqxhybvnkr"]
+[gd_scene load_steps=15 format=3 uid="uid://cpcdqxhybvnkr"]
 
 [ext_resource type="PackedScene" uid="uid://cobvkbplflytl" path="res://02_Environment/Cemetery.tscn" id="1_2t57h"]
 [ext_resource type="PackedScene" uid="uid://dxd36fthvajcg" path="res://02_Environment/firelight.tscn" id="1_3juaq"]
 [ext_resource type="Script" path="res://main.gd" id="1_iptrs"]
 [ext_resource type="Script" path="res://02_Environment/firelight.gd" id="2_bmw1j"]
 [ext_resource type="PackedScene" uid="uid://8qejuy0wgs0h" path="res://03_Player/Player.tscn" id="3_ros2t"]
-[ext_resource type="PackedScene" uid="uid://ea41ovdqjgbl" path="res://05_Zombies/Zombie.tscn" id="5_8gcc7"]
 
 [sub_resource type="FastNoiseLite" id="FastNoiseLite_sgeqs"]
 noise_type = 3
@@ -320,17 +319,12 @@ transform = Transform3D(-0.84119, 0, 0.54074, 0, 1, 0, -0.54074, 0, -0.84119, -2
 [node name="Spawn8" type="Node3D" parent="Spawns"]
 transform = Transform3D(-0.482855, 0, 0.875701, 0, 1, 0, -0.875701, 0, -0.482855, -20.2432, -0.306579, 5.63022)
 
-[node name="Player" parent="." instance=ExtResource("3_ros2t")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1, -5)
-collision_layer = 2
-collision_mask = 3
-
-[node name="Zombie" parent="." instance=ExtResource("5_8gcc7")]
-transform = Transform3D(30, 0, 0, 0, 30, 0, 0, 0, 30, 0, -0.311486, 0)
-
 [node name="ZombieSpawnTimer" type="Timer" parent="."]
 wait_time = 5.0
 autostart = true
+
+[node name="Player" parent="." instance=ExtResource("3_ros2t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.15214, 0)
 
 [connection signal="timeout" from="ZombieSpawnTimer" to="." method="_on_zombie_spawn_timer_timeout"]
 

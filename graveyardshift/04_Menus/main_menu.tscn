@@ -13,22 +13,22 @@ polygons = [PackedInt32Array(2, 1, 0), PackedInt32Array(4, 3, 5), PackedInt32Arr
 agent_max_slope = 0.02
 region_merge_size = 12.81
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_e1o37"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_pfs5s"]
 noise_type = 2
 seed = 2
 frequency = 0.0668
 fractal_type = 3
 
 [sub_resource type="NoiseTexture3D" id="NoiseTexture3D_fb6jy"]
-noise = SubResource("FastNoiseLite_e1o37")
+noise = SubResource("FastNoiseLite_pfs5s")
 
-[sub_resource type="FastNoiseLite" id="FastNoiseLite_jo64m"]
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_wnupv"]
 noise_type = 4
 seed = 1
 frequency = 0.3052
 
 [sub_resource type="NoiseTexture3D" id="NoiseTexture3D_5e35u"]
-noise = SubResource("FastNoiseLite_jo64m")
+noise = SubResource("FastNoiseLite_wnupv")
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_6222m"]
 sky_top_color = Color(0.0497727, 0.258326, 0.306184, 1)
@@ -37,12 +37,12 @@ sky_curve = 0.0315336
 ground_bottom_color = Color(0, 0, 0, 1)
 ground_horizon_color = Color(0, 0, 0, 1)
 
-[sub_resource type="Sky" id="Sky_rasd7"]
+[sub_resource type="Sky" id="Sky_miay7"]
 sky_material = SubResource("ProceduralSkyMaterial_6222m")
 
 [sub_resource type="Environment" id="Environment_88iwn"]
 background_mode = 2
-sky = SubResource("Sky_rasd7")
+sky = SubResource("Sky_miay7")
 fog_light_color = Color(0.182315, 0.396371, 0.352928, 1)
 fog_sun_scatter = 0.58
 fog_density = 0.0237
@@ -56,7 +56,7 @@ volumetric_fog_length = 78.03
 
 [sub_resource type="Gradient" id="Gradient_xa7y3"]
 
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_ol3bi"]
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_qw574"]
 gradient = SubResource("Gradient_xa7y3")
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_pjfqo"]
@@ -69,17 +69,17 @@ initial_velocity_min = 15.0
 initial_velocity_max = 15.0
 gravity = Vector3(0, 0, 0)
 color = Color(0.39277, 0.506067, 0.437543, 1)
-color_ramp = SubResource("GradientTexture1D_ol3bi")
+color_ramp = SubResource("GradientTexture1D_qw574")
 collision_mode = 1
 collision_friction = 0.0
 collision_bounce = 0.0
 
-[sub_resource type="Curve" id="Curve_pr81a"]
+[sub_resource type="Curve" id="Curve_72scg"]
 max_value = 0.5
 _data = [Vector2(0, 0), 0.0, 0.708157, 0, 0, Vector2(0.021978, 0.309398), 1.85307, 1.85307, 0, 0, Vector2(0.238095, 0.485338), 0.0, 0.0, 0, 0, Vector2(0.985348, 0.00639099), 0.0, 0.0, 0, 0]
 point_count = 4
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_dh7b0"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0a0fu"]
 transparency = 1
 cull_mode = 2
 shading_mode = 0
@@ -87,11 +87,11 @@ vertex_color_use_as_albedo = true
 use_particle_trails = true
 
 [sub_resource type="RibbonTrailMesh" id="RibbonTrailMesh_m56ei"]
-material = SubResource("StandardMaterial3D_dh7b0")
+material = SubResource("StandardMaterial3D_0a0fu")
 size = 0.1
 sections = 2
 section_length = 0.1
-curve = SubResource("Curve_pr81a")
+curve = SubResource("Curve_72scg")
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cag44"]
 
@@ -556,7 +556,7 @@ size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="NavigationRegion3D/Background/SubViewportContainer/SubViewport"]
-transform = Transform3D(0.137716, -0.0866465, 0.986674, 0.0235766, 0.996171, 0.0841895, -0.990191, 0.0116682, 0.139231, 1.9046, 58.4285, -20.4618)
+transform = Transform3D(0.137716, -0.0866465, 0.986674, 0.0235766, 0.996171, 0.0841896, -0.990191, 0.0116682, 0.139231, 1.9046, 58.4285, -20.4618)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
