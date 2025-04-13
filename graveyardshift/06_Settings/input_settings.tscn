@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://c0k50jlmh0yel"]
+
+[ext_resource type="Script" path="res://06_Settings/input_settings.gd" id="1_87gtb"]
+[ext_resource type="FontFile" uid="uid://bt5dk0vqgtavx" path="res://01_Assets/Haedus_Font_1_21/Haedus.otf" id="1_yj6jr"]
+[ext_resource type="PackedScene" uid="uid://4pkne6dmigdh" path="res://06_Settings/input_button.tscn" id="2_hbq2q"]
+
+[node name="InputSettings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_87gtb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 263.0
+offset_top = 342.0
+offset_right = 1711.0
+offset_bottom = 924.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ActionList" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="InputButton" parent="VBoxContainer/ScrollContainer/ActionList" instance=ExtResource("2_hbq2q")]
+layout_mode = 2
+
+[node name="ResetButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_mode = 0
+theme_override_colors/font_hover_pressed_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_hover_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_pressed_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_focus_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_colors/font_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_colors/icon_pressed_color = Color(0.894118, 0.517647, 0.498039, 0.439216)
+theme_override_colors/icon_hover_color = Color(0.894118, 0.517647, 0.498039, 0.439216)
+theme_override_fonts/font = ExtResource("1_yj6jr")
+theme_override_font_sizes/font_size = 90
+text = "Reset to default"
+
+[connection signal="pressed" from="VBoxContainer/ResetButton" to="." method="_on_reset_button_pressed"]

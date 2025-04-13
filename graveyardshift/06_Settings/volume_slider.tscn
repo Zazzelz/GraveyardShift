@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://b01j13th2c6a0"]
+
+[ext_resource type="Script" path="res://06_Settings/volume_slider.gd" id="1_7h2fx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6uw84"]
+bg_color = Color(0.572549, 0.67451, 0.662745, 1)
+border_width_left = 10
+border_width_top = 10
+border_width_right = 10
+border_width_bottom = 10
+border_color = Color(0.894118, 0.517647, 0.498039, 1)
+border_blend = true
+
+[node name="Volume_Slider" type="HSlider"]
+offset_right = 8.0
+offset_bottom = 16.0
+theme_override_styles/slider = SubResource("StyleBoxFlat_6uw84")
+max_value = 1.0
+step = 0.001
+script = ExtResource("1_7h2fx")

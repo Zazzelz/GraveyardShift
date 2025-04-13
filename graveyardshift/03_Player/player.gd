@@ -20,17 +20,16 @@ var is_attacking = false
 
 func _ready() -> void:
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("release_mouse"):
-		Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-
+	process_mode = Node.PROCESS_MODE_ALWAYS
+	
 func _unhandled_input(event: InputEvent) -> void:
-	var is_camera_motion := (
-		event is InputEventMouseMotion and
-		Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
-	)
-	if is_camera_motion:
-		_camera_input_direction = event.screen_relative * mouse_sensitivity
+	if event is InputEventMouseMotion and !get_tree().paused:
+		var is_camera_motion := (
+			event is InputEventMouseMotion and
+			Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED
+		)
+		if is_camera_motion:
+			_camera_input_direction = event.screen_relative * mouse_sensitivity
 
 func set_attacking_false():
 	is_attacking = false

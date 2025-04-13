@@ -1,0 +1,67 @@
+[gd_scene load_steps=4 format=3 uid="uid://4pkne6dmigdh"]
+
+[ext_resource type="FontFile" uid="uid://bt5dk0vqgtavx" path="res://01_Assets/Haedus_Font_1_21/Haedus.otf" id="1_v6grl"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hj5kl"]
+bg_color = Color(0.894118, 0.517647, 0.498039, 0.439216)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myikj"]
+bg_color = Color(0.572549, 0.67451, 0.662745, 0.254902)
+
+[node name="InputButton" type="Button"]
+custom_minimum_size = Vector2(0, 100)
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_hj5kl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hj5kl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_myikj")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="Control3" type="Control" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+
+[node name="LabelAction" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_colors/font_shadow_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_colors/font_outline_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_fonts/font = ExtResource("1_v6grl")
+theme_override_font_sizes/font_size = 60
+text = "Action Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="LabelInput" type="Label" parent="MarginContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_colors/font_shadow_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_colors/font_outline_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_fonts/font = ExtResource("1_v6grl")
+theme_override_font_sizes/font_size = 60
+text = "Input Key"
+vertical_alignment = 1
+
+[node name="Control2" type="Control" parent="MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2

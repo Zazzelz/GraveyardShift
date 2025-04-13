@@ -1,0 +1,122 @@
+[gd_scene load_steps=5 format=3 uid="uid://q1g3drbbyuqb"]
+
+[ext_resource type="FontFile" uid="uid://bt5dk0vqgtavx" path="res://01_Assets/Haedus_Font_1_21/Haedus.otf" id="1_eelgu"]
+[ext_resource type="Script" path="res://06_Settings/pause_menu.gd" id="1_ykv8h"]
+[ext_resource type="PackedScene" uid="uid://6qcwdm384mcj" path="res://06_Settings/settings_window.tscn" id="2_1u58y"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rsjgh"]
+bg_color = Color(0.894118, 0.517647, 0.498039, 0.439216)
+
+[node name="PauseMenu" type="CanvasLayer"]
+script = ExtResource("1_ykv8h")
+
+[node name="PauseWindow" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseWindow"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="PanelContainer" type="PanelContainer" parent="PauseWindow/MarginContainer"]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseWindow/MarginContainer/PanelContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PauseWindow/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="PauseWindow/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(110, 0)
+layout_mode = 2
+theme_override_colors/font_hover_pressed_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_hover_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_pressed_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_fonts/font = ExtResource("1_eelgu")
+theme_override_font_sizes/font_size = 90
+theme_override_styles/normal_mirrored = SubResource("StyleBoxFlat_rsjgh")
+text = "X"
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseWindow/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="PauseWindow/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_colors/font_shadow_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_outline_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_fonts/font = ExtResource("1_eelgu")
+theme_override_font_sizes/font_size = 200
+text = "Paused"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseWindow/MarginContainer/PanelContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="ContinueButton" type="Button" parent="PauseWindow/MarginContainer/PanelContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_hover_pressed_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_hover_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_pressed_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_fonts/font = ExtResource("1_eelgu")
+theme_override_font_sizes/font_size = 80
+text = "Continue Shift"
+
+[node name="SettingsButton" type="Button" parent="PauseWindow/MarginContainer/PanelContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_hover_pressed_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_hover_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_pressed_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_fonts/font = ExtResource("1_eelgu")
+theme_override_font_sizes/font_size = 80
+text = "Settings"
+
+[node name="QuitButton" type="Button" parent="PauseWindow/MarginContainer/PanelContainer/VBoxContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+size_flags_stretch_ratio = 0.0
+theme_override_colors/font_hover_pressed_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_hover_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_pressed_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_colors/font_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_fonts/font = ExtResource("1_eelgu")
+theme_override_font_sizes/font_size = 80
+text = "EnD Shift"
+
+[node name="Settings" parent="." instance=ExtResource("2_1u58y")]
+visible = false
+
+[connection signal="pressed" from="PauseWindow/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
+[connection signal="pressed" from="PauseWindow/MarginContainer/PanelContainer/VBoxContainer/VBoxContainer/ContinueButton" to="." method="_on_continue_button_pressed"]
+[connection signal="pressed" from="PauseWindow/MarginContainer/PanelContainer/VBoxContainer/VBoxContainer/SettingsButton" to="." method="_on_settings_button_pressed"]
+[connection signal="pressed" from="PauseWindow/MarginContainer/PanelContainer/VBoxContainer/VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Settings/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/Back_Button" to="." method="_on_back_button_pressed"]
+
+[editable path="Settings"]

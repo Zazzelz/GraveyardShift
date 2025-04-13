@@ -318,6 +318,7 @@ text = "End Shift"
 
 [node name="Click" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("3_2e58a")
+bus = &"SFX"
 
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/StartGame" to="Control" method="_on_start_game_pressed"]
 [connection signal="pressed" from="Control/MarginContainer/VBoxContainer/Settings" to="Control" method="_on_settings_pressed"]

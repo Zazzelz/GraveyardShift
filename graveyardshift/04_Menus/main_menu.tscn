@@ -556,7 +556,7 @@ size = Vector2i(1920, 1080)
 render_target_update_mode = 4
 
 [node name="Camera3D" type="Camera3D" parent="NavigationRegion3D/Background/SubViewportContainer/SubViewport"]
-transform = Transform3D(0.137716, -0.0866465, 0.986674, 0.0235766, 0.996171, 0.0841896, -0.990191, 0.0116682, 0.139231, 1.9046, 58.4285, -20.4618)
+transform = Transform3D(0.137716, -0.0866465, 0.986674, 0.0235766, 0.996171, 0.0841896, -0.990191, 0.0116682, 0.139232, 1.9046, 58.4285, -20.4618)
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
@@ -666,6 +666,7 @@ text = "End Shift"
 
 [node name="Click" type="AudioStreamPlayer" parent="Control"]
 stream = ExtResource("5_55bma")
+bus = &"SFX"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 root_node = NodePath("../NavigationRegion3D/Background")

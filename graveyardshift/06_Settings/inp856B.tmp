@@ -1,0 +1,85 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0k50jlmh0yel"]
+
+[ext_resource type="Script" path="res://06_Settings/input_settings.gd" id="1_87gtb"]
+[ext_resource type="FontFile" uid="uid://bt5dk0vqgtavx" path="res://01_Assets/Haedus_Font_1_21/Haedus.otf" id="1_yj6jr"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hj5kl"]
+bg_color = Color(0.894118, 0.517647, 0.498039, 0.439216)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_myikj"]
+bg_color = Color(0.572549, 0.67451, 0.662745, 0.254902)
+
+[node name="InputSettings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_87gtb")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+offset_left = 263.0
+offset_top = 342.0
+offset_right = 1711.0
+offset_bottom = 924.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ActionList" type="VBoxContainer" parent="VBoxContainer/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Button" type="Button" parent="VBoxContainer/ScrollContainer/ActionList"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+focus_mode = 0
+theme_override_styles/hover = SubResource("StyleBoxFlat_hj5kl")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hj5kl")
+theme_override_styles/normal = SubResource("StyleBoxFlat_myikj")
+
+[node name="MarginContainer" type="MarginContainer" parent="VBoxContainer/ScrollContainer/ActionList/Button"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer/ScrollContainer/ActionList/Button/MarginContainer"]
+layout_mode = 2
+
+[node name="LabelAction" type="Label" parent="VBoxContainer/ScrollContainer/ActionList/Button/MarginContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_colors/font_shadow_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_colors/font_outline_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_fonts/font = ExtResource("1_yj6jr")
+theme_override_font_sizes/font_size = 60
+text = "Action Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Control" type="Control" parent="VBoxContainer/ScrollContainer/ActionList/Button/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+mouse_filter = 1
+
+[node name="LabelInput" type="Label" parent="VBoxContainer/ScrollContainer/ActionList/Button/MarginContainer/HBoxContainer"]
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_colors/font_shadow_color = Color(0.572549, 0.67451, 0.662745, 1)
+theme_override_colors/font_outline_color = Color(0.894118, 0.517647, 0.498039, 1)
+theme_override_fonts/font = ExtResource("1_yj6jr")
+theme_override_font_sizes/font_size = 60
+text = "Input Key"
+vertical_alignment = 1

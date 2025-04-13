@@ -750,7 +750,7 @@ current_tab = 0
 [node name="Resolution" parent="Settings/MarginContainer/PanelContainer/VBoxContainer/TabContainer" index="1"]
 visible = true
 
-[node name="Credits" parent="Settings/MarginContainer/PanelContainer/VBoxContainer/TabContainer" index="4"]
+[node name="Volume" parent="Settings/MarginContainer/PanelContainer/VBoxContainer/TabContainer" index="2"]
 visible = false
 
 [node name="Menu" type="Control" parent="."]
@@ -866,6 +866,7 @@ text = "End Shift"
 
 [node name="Click" type="AudioStreamPlayer" parent="Menu"]
 stream = ExtResource("7_5sypt")
+bus = &"SFX"
 
 [connection signal="pressed" from="Settings/MarginContainer/PanelContainer/VBoxContainer/HBoxContainer/Back_Button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Menu/MarginContainer/VBoxContainer/StartGame" to="Menu" method="_on_start_game_pressed"]
